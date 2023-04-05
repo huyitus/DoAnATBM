@@ -5,24 +5,25 @@ namespace DoAnATBM
 {
     public partial class FromMain : Form
     {
-        private OracleConnection oracleConnection;
+        private readonly OracleConnection oracleConnection;
 
         public FromMain()
         {
             InitializeComponent();
-            ConnectToDatabase();
-        }
 
-        private void ConnectToDatabase()
-        {
-            oracleConnection = new OracleConnection(Global.CONNECT_STRING);
+            oracleConnection = Global.CreateConnection();
             oracleConnection.Open();
         }
 
         private void FromMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            oracleConnection.Close();
-            oracleConnection.Dispose();
+            Global.DisposeConnection(oracleConnection);
+        }
+
+        private void ButtonUsers_Click(object sender, System.EventArgs e)
+        {
+            FormUsers formUsers = new FormUsers();
+            formUsers.Show();
         }
     }
 }

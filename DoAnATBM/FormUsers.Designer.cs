@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnATBM
 {
-    partial class FromMain
+    partial class FormUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,36 @@ namespace DoAnATBM
         /// </summary>
         private void InitializeComponent()
         {
-            this.ButtonUsers = new System.Windows.Forms.Button();
+            this.UsersGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // ButtonUsers
+            // UsersGridView
             // 
-            this.ButtonUsers.Location = new System.Drawing.Point(16, 16);
-            this.ButtonUsers.Name = "ButtonUsers";
-            this.ButtonUsers.Size = new System.Drawing.Size(216, 32);
-            this.ButtonUsers.TabIndex = 0;
-            this.ButtonUsers.Text = "Xem DS người dùng";
-            this.ButtonUsers.UseVisualStyleBackColor = true;
-            this.ButtonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
+            this.UsersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersGridView.Location = new System.Drawing.Point(12, 12);
+            this.UsersGridView.Name = "UsersGridView";
+            this.UsersGridView.RowHeadersWidth = 51;
+            this.UsersGridView.RowTemplate.Height = 24;
+            this.UsersGridView.Size = new System.Drawing.Size(818, 451);
+            this.UsersGridView.TabIndex = 0;
             // 
-            // FromMain
+            // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ButtonUsers);
-            this.Name = "FromMain";
-            this.Text = "Main";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FromMain_FormClosing);
+            this.ClientSize = new System.Drawing.Size(842, 475);
+            this.Controls.Add(this.UsersGridView);
+            this.Name = "FormUsers";
+            this.Text = "Users";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsers_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.UsersGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button ButtonUsers;
+        private System.Windows.Forms.DataGridView UsersGridView;
     }
 }
-
