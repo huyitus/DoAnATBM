@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33516.290
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnATBM", "DoAnATBM\DoAnATBM.csproj", "{75AA7D6D-2ED2-4AE3-A2CF-4896E521ACC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnATBM", "DoAnATBM\DoAnATBM.csproj", "{922E39B6-8BE2-4418-9D4A-753AE99F8B19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{75AA7D6D-2ED2-4AE3-A2CF-4896E521ACC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75AA7D6D-2ED2-4AE3-A2CF-4896E521ACC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75AA7D6D-2ED2-4AE3-A2CF-4896E521ACC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75AA7D6D-2ED2-4AE3-A2CF-4896E521ACC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922E39B6-8BE2-4418-9D4A-753AE99F8B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922E39B6-8BE2-4418-9D4A-753AE99F8B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922E39B6-8BE2-4418-9D4A-753AE99F8B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922E39B6-8BE2-4418-9D4A-753AE99F8B19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F05395A6-C7D9-4061-A205-7FCDF7B6CB64}
+		SolutionGuid = {D3AF2E31-7A7C-4EA1-997D-28123762D693}
 	EndGlobalSection
 EndGlobal
