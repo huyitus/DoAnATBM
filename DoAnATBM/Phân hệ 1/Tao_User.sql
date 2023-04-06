@@ -12,6 +12,8 @@ Begin
         execute immediate('grant create session to '||User_name);
     END IF;
 End;
+
+//Test
 BEGIN 
     Grant_NewUser('NV001', 'NV001');
 END;
