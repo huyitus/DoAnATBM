@@ -13,8 +13,7 @@ Begin
     END IF;
 End;
 
-<<<<<<< HEAD
------ Xóa user 
+----- Xoa user 
 create or replace procedure Drop_User(User_name in varchar2)
 authid current_user
 as
@@ -27,8 +26,21 @@ Begin
     RAISE_APPLICATION_ERROR(-20000,'User khong ton tai');
     end if;
 End;
-=======
->>>>>>> 019471cafd1c937f441929df7b7048fdeb1b570c
+
+-----Test
+BEGIN 
+    Create_NewUser('NV001', 'NV001');
+END;
+
+BEGIN 
+    Drop_User('NV001');
+END;
+exec Drop_User('NV001');
+
+drop user NV001;
+select * from dba_users;
+
+
 --Test
 BEGIN 
     Create_NewUser('NV001', 'NV001');
