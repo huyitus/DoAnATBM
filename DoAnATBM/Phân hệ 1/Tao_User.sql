@@ -13,7 +13,7 @@ Begin
     END IF;
 End;
 
-//Test
+--Test
 BEGIN 
     Grant_NewUser('NV001', 'NV001');
 END;
