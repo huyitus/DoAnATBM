@@ -6,7 +6,7 @@ drop table PHONGBAN;
 drop table NHANVIEN;
 
 create table NHANVIEN (
-    MANV int primary key,
+    MANV varchar(5) primary key,
     TENNV nvarchar2(50),
     PHAI nvarchar2(3),
     NGAYSINH date,
@@ -20,22 +20,23 @@ create table NHANVIEN (
     constraint check_phai check (PHAI in (N'Nam', N'Nữ'))
 );
 
+
 create table PHONGBAN (
-    MAPB int primary key,
+    MAPB varchar(5) primary key,
     TENPB nvarchar2(50),
     TRPHG int
 );
 
 create table DEAN (
-    MADA int primary key,
+    MADA varchar(5) primary key,
     TENDA nvarchar2(50),
     NGAYBD date,
     PHONG int
 );
 
 create table PHANCONG (
-    MANV int,
-    MADA int,
+    MANV varchar(5),
+    MADA varchar(5),
     THOIGIAN int,
     primary key (MANV, MADA)
 );
@@ -46,6 +47,14 @@ alter table PHONGBAN add foreign key (TRPHG) references NHANVIEN(MANV);
 alter table DEAN add foreign key (PHONG) references PHONGBAN(MAPB);
 alter table PHANCONG add foreign key (MADA) references DEAN(MADA);
 alter table PHANCONG add foreign key (MANV) references NHANVIEN(MANV);
+
+insert into PHONGBAN values('PB001', N'Kế hoạch',null);
+insert into PHONGBAN values('PB002', N'Tài chính',null);
+insert into PHONGBAN values('PB003', N'Nhân sự',null);
+insert into PHONGBAN values('PB004', N'Kỹ thuật',null);
+insert into PHONGBAN values('PB005', N'Marketing',null);
+insert into PHONGBAN values('PB006', N'Hành chính',null);
+
 
 drop user admin;
 
