@@ -79,17 +79,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateUser.Designer.cs">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FromCreateUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FromCreateUser.Designer.cs">
-      <DependentUpon>FromCreateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
@@ -100,11 +100,11 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FromCreateUser.resx">
-      <DependentUpon>FromCreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>

@@ -28,7 +28,7 @@ namespace DoAnATBM
 
         private void ButtonCreateUser_Click(object sender, System.EventArgs e)
         {
-            FromCreateUser form = new FromCreateUser();
+            FormCreateUser form = new FormCreateUser();
             form.Show();
         }
     }
