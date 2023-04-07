@@ -15,8 +15,8 @@ create table NHANVIEN (
     LUONG int,
     PHUCAP int,
     VAITRO nvarchar2(20),
-    MANQL int,
-    PHG int,
+    MANQL varchar(5),
+    PHG varchar(5),
     constraint check_phai check (PHAI in (N'Nam', N'Nữ'))
 );
 
@@ -31,7 +31,7 @@ create table DEAN (
     MADA varchar(5) primary key,
     TENDA nvarchar2(50),
     NGAYBD date,
-    PHONG int
+    PHONG varchar(5)
 );
 
 create table PHANCONG (
