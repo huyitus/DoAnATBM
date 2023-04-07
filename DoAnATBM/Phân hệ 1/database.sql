@@ -55,6 +55,14 @@ insert into PHONGBAN values('PB004', N'Kỹ thuật',null);
 insert into PHONGBAN values('PB005', N'Marketing',null);
 insert into PHONGBAN values('PB006', N'Hành chính',null);
 
+alter session set nls_date_format = 'YY-MM-DD';
+insert into DEAN values('DA001', N'HTTT quản lý các trường ĐH', '2007-10-20', 'PB006');
+insert into DEAN values('DA002', N'Nghiên cứu tế bào gốc', '2006-10-20', 'PB006');
+insert into DEAN values('DA003', N'Ứng dụng hóa học xanh', '2003-10-10', 'PB001');
+insert into DEAN values('DA004', N'HTTT quản lý giáo viên cho một Khoa', '2000-10-23', 'PB003');
+insert into DEAN values('DA005', N'HTTT quản lý thư viện các trường ĐH', '2009-05-10', 'PB001');
+insert into DEAN values('DA006', N'Nghiên cứu chế tạo sợi Nano Platin', '2008-05-15', 'PB005');
+
 
 drop user admin;
 
