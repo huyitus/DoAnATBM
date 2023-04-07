@@ -25,5 +25,11 @@ namespace DoAnATBM
             FormUsers formUsers = new FormUsers();
             formUsers.Show();
         }
+
+        private void ButtonCreateUser_Click(object sender, System.EventArgs e)
+        {
+            FromCreateUser form = new FromCreateUser();
+            form.Show();
+        }
     }
 }
