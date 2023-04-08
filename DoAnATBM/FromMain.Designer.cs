@@ -34,6 +34,7 @@ namespace DoAnATBM
             this.buttonAlterUser = new System.Windows.Forms.Button();
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
+            this.buttonCreateRole = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace DoAnATBM
             this.groupBox1.Controls.Add(this.ButtonUsers);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 200);
+            this.groupBox1.Size = new System.Drawing.Size(256, 244);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
@@ -90,15 +91,28 @@ namespace DoAnATBM
             this.buttonCreateUser.UseVisualStyleBackColor = true;
             this.buttonCreateUser.Click += new System.EventHandler(this.ButtonCreateUser_Click);
             // 
+            // buttonCreateRole
+            // 
+            this.buttonCreateRole.Location = new System.Drawing.Point(393, 42);
+            this.buttonCreateRole.Name = "buttonCreateRole";
+            this.buttonCreateRole.Size = new System.Drawing.Size(220, 30);
+            this.buttonCreateRole.TabIndex = 4;
+            this.buttonCreateRole.Text = "Tạo role";
+            this.buttonCreateRole.UseVisualStyleBackColor = true;
+            this.buttonCreateRole.Click += new System.EventHandler(this.buttonCreateRole_Click);
+
+            // 
             // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonCreateRole);
             this.Name = "FromMain";
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FromMain_FormClosing);
+            this.Load += new System.EventHandler(this.FromMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -111,6 +125,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonCreateUser;
         private System.Windows.Forms.Button buttonDropUser;
         private System.Windows.Forms.Button buttonAlterUser;
+        private System.Windows.Forms.Button buttonCreateRole;
+
     }
 }
 

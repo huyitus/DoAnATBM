@@ -39,5 +39,10 @@ namespace DoAnATBM
         {
             Global.DisposeConnection(oracleConnection);
         }
+
+        private void FormCreateUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

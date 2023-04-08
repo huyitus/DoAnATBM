@@ -43,5 +43,16 @@ namespace DoAnATBM
             FormAlterUser form = new FormAlterUser();
             form.Show();
         }
+        private void buttonCreateRole_Click(object sender, System.EventArgs e)
+        {
+            FormCreateRole form = new FormCreateRole();
+           
+            form.ShowDialog();
+        }
+
+        private void FromMain_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

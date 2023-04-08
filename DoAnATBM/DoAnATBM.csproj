@@ -85,6 +85,12 @@
     <Compile Include="FormAlterUser.Designer.cs">
       <DependentUpon>FormAlterUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCreateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateRole.Designer.cs">
+      <DependentUpon>FormCreateRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAlterUser.resx">
       <DependentUpon>FormAlterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateRole.resx">
+      <DependentUpon>FormCreateRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateUser.resx">
       <DependentUpon>FormCreateUser.cs</DependentUpon>

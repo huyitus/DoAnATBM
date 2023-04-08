@@ -38,5 +38,10 @@ namespace DoAnATBM
                 MessageBox.Show(oe.Message, "Lỗi");
             }
         }
+
+        private void FormAlterUser_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
