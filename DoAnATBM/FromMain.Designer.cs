@@ -52,9 +52,7 @@ namespace DoAnATBM
             this.ButtonUsers.Text = "Xem danh sách";
             this.ButtonUsers.UseVisualStyleBackColor = true;
             this.ButtonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
-<<<<<<< HEAD
-            //
-=======
+
             // 
             // groupBox1
             // 
@@ -153,7 +151,6 @@ namespace DoAnATBM
             this.buttonViewRoles.UseVisualStyleBackColor = true;
             this.buttonViewRoles.Click += new System.EventHandler(this.buttonViewRoles_Click);
             // 
->>>>>>> 1a5b3a851549ecb1e8baa8c4163f3a155f2b9092
             // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
