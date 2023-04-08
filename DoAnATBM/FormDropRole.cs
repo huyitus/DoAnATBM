@@ -1,13 +1,20 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
 namespace DoAnATBM
 {
-    public partial class FormCreateRole : Form
+    public partial class FormDropRole : Form
     {
         private readonly OracleConnection oracleConnection;
-
-        public FormCreateRole()
+        public FormDropRole()
         {
             InitializeComponent();
 
@@ -15,17 +22,20 @@ namespace DoAnATBM
             oracleConnection.Open();
         }
 
-        private void buttonCreate_Click(object sender, System.EventArgs e)
+        private void FormDropRole_Load(object sender, EventArgs e)
         {
-            OracleCommand cmd = new OracleCommand("create_role", oracleConnection);
+
+        }
+        private void buttonDropRole_Click(object sender, System.EventArgs e)
+        {
+            OracleCommand cmd = new OracleCommand("drop_role", oracleConnection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("role_name", OracleDbType.Varchar2).Value = "C##" + textName.Text;
-            cmd.Parameters.Add("pass_word", OracleDbType.Varchar2).Value = textPass.Text;
 
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Tạo thành công", "Thông báo");
+                MessageBox.Show("Xóa thành công", "Thông báo");
             }
             catch (OracleException oe)
             {
@@ -43,7 +53,4 @@ namespace DoAnATBM
 
         }
     }
-
-
 }
-

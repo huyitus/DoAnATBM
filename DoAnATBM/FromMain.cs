@@ -49,7 +49,27 @@ namespace DoAnATBM
            
             form.ShowDialog();
         }
+        
+        private void buttonDropRole_Click(object sender, System.EventArgs e)
+        {
+            FormDropRole form = new FormDropRole();
 
+            form.ShowDialog();
+        }
+        
+        private void buttonChangePW_Click(object sender, System.EventArgs e)
+        {
+            FormChangePW form = new FormChangePW();
+
+            form.ShowDialog();
+        }
+        
+        private void buttonViewRoles_Click(object sender, System.EventArgs e)
+        {
+            FormViewRoles form = new FormViewRoles();
+
+            form.ShowDialog();
+        }
         private void FromMain_Load(object sender, System.EventArgs e)
         {
 

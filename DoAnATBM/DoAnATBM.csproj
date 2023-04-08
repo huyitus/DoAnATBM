@@ -85,6 +85,12 @@
     <Compile Include="FormAlterUser.Designer.cs">
       <DependentUpon>FormAlterUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChangePW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePW.Designer.cs">
+      <DependentUpon>FormChangePW.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     </Compile>
     <Compile Include="FormCreateUser.Designer.cs">
       <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDropRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDropRole.Designer.cs">
+      <DependentUpon>FormDropRole.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDropUser.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,12 @@
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewRoles.Designer.cs">
+      <DependentUpon>FormViewRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,17 +139,26 @@
     <EmbeddedResource Include="FormAlterUser.resx">
       <DependentUpon>FormAlterUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePW.resx">
+      <DependentUpon>FormChangePW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreateRole.resx">
       <DependentUpon>FormCreateRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateUser.resx">
       <DependentUpon>FormCreateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDropRole.resx">
+      <DependentUpon>FormDropRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDropUser.resx">
       <DependentUpon>FormDropUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewRoles.resx">
+      <DependentUpon>FormViewRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>
