@@ -74,7 +74,7 @@ namespace DoAnATBM
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(90, 30);
             this.buttonCreate.TabIndex = 4;
-            this.buttonCreate.Text = "Tạo";
+            this.buttonCreate.Text = "Tạo mới";
             this.buttonCreate.UseVisualStyleBackColor = true;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 

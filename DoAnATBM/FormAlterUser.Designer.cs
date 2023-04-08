@@ -72,7 +72,7 @@ namespace DoAnATBM
             // 
             this.buttonUpdate.Location = new System.Drawing.Point(130, 90);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 30);
+            this.buttonUpdate.Size = new System.Drawing.Size(86, 30);
             this.buttonUpdate.TabIndex = 4;
             this.buttonUpdate.Text = "Cập nhật";
             this.buttonUpdate.UseVisualStyleBackColor = true;
