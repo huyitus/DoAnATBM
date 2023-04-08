@@ -4,10 +4,18 @@ alter session set "_oracle_script"=true;
 create or replace procedure grant_privilege_to_role (role_name in varchar2, privilege_name in varchar2, table_name in varchar2)
 authid current_user
 as
-    tmp_query varchar2(100);
 begin
-    tmp_query := 'Grant '||privilege_name|| 'on '||table_name||' to '||role_name;
-    execute immediate (tmp_query);
+    execute immediate ('Grant '||privilege_name|| 'on '||table_name||' to '||role_name);
+end;
+
+/
+
+--phan quyen cho role co with grant option
+create or replace procedure grant_priv_to_role_with_grant_option (role_name in varchar2, privilege_name in varchar2, table_name in varchar2, withGrantOption in varchar2)
+authid current_user
+as
+begin
+    execute immediate ('Grant '||privilege_name|| 'on '||table_name||' to '||role_name||' '||withGrantOption);
 end;
 
 /
@@ -16,8 +24,7 @@ end;
 create or replace procedure revoke_privilege_to_role (role_name in varchar2, privilege_name in varchar2, table_name in varchar2)
 authid current_user
 as
-    tmp_query varchar2(100);
 begin
-    tmp_query := 'Revoke '||privilege_name|| 'on '||table_name||' from '||role_name;
-    execute immediate (tmp_query);
+    execute immediate ('Revoke '||privilege_name|| 'on '||table_name||' from '||role_name);
 end;
+
