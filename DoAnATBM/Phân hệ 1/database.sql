@@ -63,7 +63,7 @@ insert into PHONGBAN values('PB004', N'Kỹ thuật',null);
 insert into PHONGBAN values('PB005', N'Marketing',null);
 insert into PHONGBAN values('PB006', N'Hành chính',null);
 
-alter session set nls_date_format = 'YY-MM-DD';
+alter session set nls_date_format = 'YYYY-MM-DD';
 insert into DEAN values('DA001', N'HTTT quản lý các trường ĐH', '2007-10-20', 'PB006');
 insert into DEAN values('DA002', N'Nghiên cứu tế bào gốc', '2006-10-20', 'PB006');
 insert into DEAN values('DA003', N'Ứng dụng hóa học xanh', '2003-10-10', 'PB001');
