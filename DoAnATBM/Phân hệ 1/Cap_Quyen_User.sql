@@ -1,5 +1,5 @@
---Cap quyen user
-create or replace procedure Grant_Priv_User(User_Name in varchar2, priv in varchar2,table_name in varchar2, grant_option in varchar2)
+--Cap quyen user cho select va delete
+create or replace procedure Grant_Priv_User1(User_Name in varchar2, priv in varchar2,table_name in varchar2, grant_option in varchar2)
 authid current_user
 is
     Tmp_count int;
@@ -15,10 +15,24 @@ begin
         RAISE_APPLICATION_ERROR(-20000,'User khong ton tai');
     end if;     
 end;
-
+--Cap quyen user cho insert va update
+create or replace procedure Grant_Priv_User2(User_Name in varchar2, priv in varchar2,table_name in varchar2, col_name in varchar2, grant_option in varchar2)
+authid current_user
+is
+    Tmp_count int;
 begin
-    Grant_Priv_User('NV002','select', 'DEAN','YES');
+    select count(*)into Tmp_count from all_users where username=User_name;
+    if(Tmp_count != 0) then
+        if (grant_option ='YES') then
+            execute immediate( 'Grant '||priv||'( '||col_name|| ') on ' || table_name|| ' to '|| User_name|| ' with grant option');
+        elsif(grant_option='NO') then
+            execute immediate('Grant '||priv||'( '||col_name|| ') on '  || table_name|| ' to '|| User_name);
+        end if;
+    else 
+        RAISE_APPLICATION_ERROR(-20000,'User khong ton tai');
+    end if;     
 end;
+
 
 --Thu hoi quyen user
 create or replace procedure Revoke_Priv_User( User_name in varchar, priv in varchar2, table_name in varchar2)
