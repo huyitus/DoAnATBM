@@ -31,6 +31,8 @@ namespace DoAnATBM
         {
             this.ButtonUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAlterUser = new System.Windows.Forms.Button();
+            this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -47,14 +49,36 @@ namespace DoAnATBM
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonAlterUser);
+            this.groupBox1.Controls.Add(this.buttonDropUser);
             this.groupBox1.Controls.Add(this.buttonCreateUser);
             this.groupBox1.Controls.Add(this.ButtonUsers);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 130);
+            this.groupBox1.Size = new System.Drawing.Size(260, 200);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Users:";
+            this.groupBox1.Text = "Người dùng:";
+            // 
+            // buttonAlterUser
+            // 
+            this.buttonAlterUser.Location = new System.Drawing.Point(20, 150);
+            this.buttonAlterUser.Name = "buttonAlterUser";
+            this.buttonAlterUser.Size = new System.Drawing.Size(220, 30);
+            this.buttonAlterUser.TabIndex = 3;
+            this.buttonAlterUser.Text = "Đổi mật khẩu";
+            this.buttonAlterUser.UseVisualStyleBackColor = true;
+            this.buttonAlterUser.Click += new System.EventHandler(this.buttonAlterUser_Click);
+            // 
+            // buttonDropUser
+            // 
+            this.buttonDropUser.Location = new System.Drawing.Point(20, 110);
+            this.buttonDropUser.Name = "buttonDropUser";
+            this.buttonDropUser.Size = new System.Drawing.Size(220, 30);
+            this.buttonDropUser.TabIndex = 2;
+            this.buttonDropUser.Text = "Xóa";
+            this.buttonDropUser.UseVisualStyleBackColor = true;
+            this.buttonDropUser.Click += new System.EventHandler(this.buttonDropUser_Click);
             // 
             // buttonCreateUser
             // 
@@ -85,6 +109,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Button ButtonUsers;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonCreateUser;
+        private System.Windows.Forms.Button buttonDropUser;
+        private System.Windows.Forms.Button buttonAlterUser;
     }
 }
 

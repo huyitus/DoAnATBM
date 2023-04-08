@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 using Oracle.ManagedDataAccess.Client;
 
 namespace DoAnATBM
 {
-    public partial class FormCreateUser : Form
+    public partial class FormDropUser : Form
     {
         private readonly OracleConnection oracleConnection;
 
-        public FormCreateUser()
+        public FormDropUser()
         {
             InitializeComponent();
 
@@ -17,17 +18,16 @@ namespace DoAnATBM
             oracleConnection.Open();
         }
 
-        private void buttonCreate_Click(object sender, EventArgs e)
+        private void buttonDrop_Click(object sender, EventArgs e)
         {
-            OracleCommand cmd = new OracleCommand("Create_NewUser", oracleConnection);
+            OracleCommand cmd = new OracleCommand("Drop_User", oracleConnection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("User_name", OracleDbType.Varchar2).Value = "c##" + textName.Text;
-            cmd.Parameters.Add("Pass_Word", OracleDbType.NVarchar2).Value = textPass.Text;
+            cmd.Parameters.Add("User_name", OracleDbType.Varchar2).Value = "C##" + textName.Text.ToUpper();
 
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Tạo thành công", "Thông báo");
+                MessageBox.Show("Xóa thành công", "Thông báo");
             }
             catch (OracleException oe)
             {
@@ -35,7 +35,7 @@ namespace DoAnATBM
             }
         }
 
-        private void FormCreateUser_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormDropUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             Global.DisposeConnection(oracleConnection);
         }

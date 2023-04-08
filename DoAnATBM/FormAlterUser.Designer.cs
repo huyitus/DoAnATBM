@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnATBM
 {
-    partial class FormCreateUser
+    partial class FormAlterUser
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace DoAnATBM
             this.label2 = new System.Windows.Forms.Label();
             this.textName = new System.Windows.Forms.TextBox();
             this.textPass = new System.Windows.Forms.TextBox();
-            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,49 +48,49 @@ namespace DoAnATBM
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 60);
+            this.label2.Location = new System.Drawing.Point(20, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.Size = new System.Drawing.Size(96, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu:";
+            this.label2.Text = "Mật khẩu mới:";
             // 
             // textName
             // 
-            this.textName.Location = new System.Drawing.Point(100, 20);
+            this.textName.Location = new System.Drawing.Point(130, 20);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(180, 22);
+            this.textName.Size = new System.Drawing.Size(200, 22);
             this.textName.TabIndex = 2;
             // 
             // textPass
             // 
-            this.textPass.Location = new System.Drawing.Point(100, 60);
+            this.textPass.Location = new System.Drawing.Point(130, 50);
             this.textPass.Name = "textPass";
-            this.textPass.Size = new System.Drawing.Size(180, 22);
+            this.textPass.Size = new System.Drawing.Size(200, 22);
             this.textPass.TabIndex = 3;
             // 
-            // buttonCreate
+            // buttonUpdate
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(100, 100);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(90, 30);
-            this.buttonCreate.TabIndex = 4;
-            this.buttonCreate.Text = "Tạo";
-            this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.buttonUpdate.Location = new System.Drawing.Point(130, 90);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 30);
+            this.buttonUpdate.TabIndex = 4;
+            this.buttonUpdate.Text = "Cập nhật";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
-            // FormCreateUser
+            // FormAlterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 152);
-            this.Controls.Add(this.buttonCreate);
+            this.ClientSize = new System.Drawing.Size(358, 143);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.textPass);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FormCreateUser";
-            this.Text = "Tạo người dùng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCreateUser_FormClosing);
+            this.Name = "FormAlterUser";
+            this.Text = "Đổi mật khẩu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAlterUser_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +102,6 @@ namespace DoAnATBM
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.TextBox textPass;
-        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

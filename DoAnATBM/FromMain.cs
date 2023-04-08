@@ -31,5 +31,17 @@ namespace DoAnATBM
             FormCreateUser form = new FormCreateUser();
             form.Show();
         }
+
+        private void buttonDropUser_Click(object sender, System.EventArgs e)
+        {
+            FormDropUser form = new FormDropUser();
+            form.Show();
+        }
+
+        private void buttonAlterUser_Click(object sender, System.EventArgs e)
+        {
+            FormAlterUser form = new FormAlterUser();
+            form.Show();
+        }
     }
 }

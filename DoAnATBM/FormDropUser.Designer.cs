@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnATBM
 {
-    partial class FormCreateUser
+    partial class FormDropUser
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,8 @@ namespace DoAnATBM
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textName = new System.Windows.Forms.TextBox();
-            this.textPass = new System.Windows.Forms.TextBox();
-            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonDrop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,52 +43,34 @@ namespace DoAnATBM
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên user:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu:";
-            // 
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(100, 20);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(180, 22);
-            this.textName.TabIndex = 2;
+            this.textName.Size = new System.Drawing.Size(170, 22);
+            this.textName.TabIndex = 1;
             // 
-            // textPass
+            // buttonDrop
             // 
-            this.textPass.Location = new System.Drawing.Point(100, 60);
-            this.textPass.Name = "textPass";
-            this.textPass.Size = new System.Drawing.Size(180, 22);
-            this.textPass.TabIndex = 3;
+            this.buttonDrop.Location = new System.Drawing.Point(100, 60);
+            this.buttonDrop.Name = "buttonDrop";
+            this.buttonDrop.Size = new System.Drawing.Size(75, 30);
+            this.buttonDrop.TabIndex = 2;
+            this.buttonDrop.Text = "Xóa";
+            this.buttonDrop.UseVisualStyleBackColor = true;
+            this.buttonDrop.Click += new System.EventHandler(this.buttonDrop_Click);
             // 
-            // buttonCreate
-            // 
-            this.buttonCreate.Location = new System.Drawing.Point(100, 100);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(90, 30);
-            this.buttonCreate.TabIndex = 4;
-            this.buttonCreate.Text = "Tạo";
-            this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
-            // 
-            // FormCreateUser
+            // FormDropUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 152);
-            this.Controls.Add(this.buttonCreate);
-            this.Controls.Add(this.textPass);
+            this.ClientSize = new System.Drawing.Size(300, 115);
+            this.Controls.Add(this.buttonDrop);
             this.Controls.Add(this.textName);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FormCreateUser";
-            this.Text = "Tạo người dùng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCreateUser_FormClosing);
+            this.Name = "FormDropUser";
+            this.Text = "Xóa người dùng";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDropUser_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,9 +79,7 @@ namespace DoAnATBM
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textName;
-        private System.Windows.Forms.TextBox textPass;
-        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonDrop;
     }
 }
