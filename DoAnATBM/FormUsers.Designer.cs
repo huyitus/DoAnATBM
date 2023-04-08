@@ -50,7 +50,7 @@ namespace DoAnATBM
             this.ClientSize = new System.Drawing.Size(842, 475);
             this.Controls.Add(this.UsersGridView);
             this.Name = "FormUsers";
-            this.Text = "Users";
+            this.Text = "Danh sách người dùng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsers_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.UsersGridView)).EndInit();
             this.ResumeLayout(false);
