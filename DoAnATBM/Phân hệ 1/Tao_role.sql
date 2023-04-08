@@ -16,7 +16,8 @@ begin
         dbms_output.put_line('Role da ton tai');
         raise;
 end;
-
+/
+exec create_role('roletest', '1');
 /
 
 --xoa role
