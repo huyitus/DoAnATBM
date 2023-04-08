@@ -79,6 +79,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAlterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlterUser.Designer.cs">
+      <DependentUpon>FormAlterUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateRole.Designer.cs">
+      <DependentUpon>FormCreateRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateUser.Designer.cs">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDropUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDropUser.Designer.cs">
+      <DependentUpon>FormDropUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +118,18 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAlterUser.resx">
+      <DependentUpon>FormAlterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateRole.resx">
+      <DependentUpon>FormCreateRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDropUser.resx">
+      <DependentUpon>FormDropUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>

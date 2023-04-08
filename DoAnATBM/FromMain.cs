@@ -25,5 +25,34 @@ namespace DoAnATBM
             FormUsers formUsers = new FormUsers();
             formUsers.Show();
         }
+
+        private void ButtonCreateUser_Click(object sender, System.EventArgs e)
+        {
+            FormCreateUser form = new FormCreateUser();
+            form.Show();
+        }
+
+        private void buttonDropUser_Click(object sender, System.EventArgs e)
+        {
+            FormDropUser form = new FormDropUser();
+            form.Show();
+        }
+
+        private void buttonAlterUser_Click(object sender, System.EventArgs e)
+        {
+            FormAlterUser form = new FormAlterUser();
+            form.Show();
+        }
+        private void buttonCreateRole_Click(object sender, System.EventArgs e)
+        {
+            FormCreateRole form = new FormCreateRole();
+           
+            form.ShowDialog();
+        }
+
+        private void FromMain_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

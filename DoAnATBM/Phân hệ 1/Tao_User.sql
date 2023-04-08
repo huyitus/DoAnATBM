@@ -1,3 +1,5 @@
+alter session set "_ORACLE_SCRIPT" = true;
+
 ----- Tao moi user
 create or replace procedure Create_NewUser(User_name in varchar2,Pass_Word in nvarchar2)
 authid current_user 
@@ -12,7 +14,7 @@ Begin
         execute immediate('grant create session to '||User_name);
     END IF;
 End;
-
+/
 ----- Xoa user
 create or replace procedure Drop_User(User_name in varchar2)
 authid current_user 
@@ -26,7 +28,7 @@ Begin
          RAISE_APPLICATION_ERROR(-20000,'User khong ton tai'); 
     END IF;
 End;
-
+/
 -------Chinh sua password user
 create or replace procedure Alter_User(User_name in varchar2,Pass_Word in varchar2)
 authid current_user
@@ -40,13 +42,14 @@ Begin
             RAISE_APPLICATION_ERROR(-20000,'User khong ton tai'); 
     END IF;
 END;
-
+/
 ----- Xem danh sach user
 create or replace view View_User
 as
     select* from dba_users;
+/
 grant select on View_User to admin;
-
+/
 -----Test
 BEGIN 
     Create_NewUser('NV001', 'NV001');
