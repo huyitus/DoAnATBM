@@ -1,4 +1,4 @@
-﻿alter session set "_ORACLE_SCRIPT" = true;
+alter session set "_ORACLE_SCRIPT" = true;
 
 drop table PHANCONG;
 drop table DEAN;
@@ -24,7 +24,7 @@ create table NHANVIEN (
 create table PHONGBAN (
     MAPB varchar(5) primary key,
     TENPB nvarchar2(50),
-    TRPHG int
+    TRPHG varchar(5)
 );
 
 create table DEAN (
@@ -47,6 +47,14 @@ alter table PHONGBAN add foreign key (TRPHG) references NHANVIEN(MANV);
 alter table DEAN add foreign key (PHONG) references PHONGBAN(MAPB);
 alter table PHANCONG add foreign key (MADA) references DEAN(MADA);
 alter table PHANCONG add foreign key (MANV) references NHANVIEN(MANV);
+
+--select constraint_name
+--from user_cons_columns
+--where table_name = 'DEAN'
+--and column_name = 'PHONG';
+
+
+--alter table DEAN drop constraint SYS_C008380;
 
 insert into PHONGBAN values('PB001', N'Kế hoạch',null);
 insert into PHONGBAN values('PB002', N'Tài chính',null);

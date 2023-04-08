@@ -41,7 +41,7 @@ namespace DoAnATBM
             this.ButtonUsers.Text = "Xem DS người dùng";
             this.ButtonUsers.UseVisualStyleBackColor = true;
             this.ButtonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
-            // 
+            //
             // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
