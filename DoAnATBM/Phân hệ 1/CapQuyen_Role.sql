@@ -18,6 +18,6 @@ authid current_user
 as
     tmp_query varchar2(100);
 begin
-    tmp_query := 'Revoke '||privilege_name|| 'on '||table_name||' to '||role_name;
+    tmp_query := 'Revoke '||privilege_name|| 'on '||table_name||' from '||role_name;
     execute immediate (tmp_query);
 end;
