@@ -31,7 +31,7 @@ namespace DoAnATBM
         {
             this.ButtonUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonViewPrivs = new System.Windows.Forms.Button();
+            this.buttonViewUserPrivileges = new System.Windows.Forms.Button();
             this.buttonPrivileges = new System.Windows.Forms.Button();
             this.buttonAlterUser = new System.Windows.Forms.Button();
             this.buttonDropUser = new System.Windows.Forms.Button();
@@ -43,8 +43,11 @@ namespace DoAnATBM
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
             this.buttonDropRole = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonViewData = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ButtonUsers
@@ -59,7 +62,7 @@ namespace DoAnATBM
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonViewPrivs);
+            this.groupBox1.Controls.Add(this.buttonViewUserPrivileges);
             this.groupBox1.Controls.Add(this.buttonPrivileges);
             this.groupBox1.Controls.Add(this.buttonAlterUser);
             this.groupBox1.Controls.Add(this.buttonDropUser);
@@ -67,20 +70,20 @@ namespace DoAnATBM
             this.groupBox1.Controls.Add(this.ButtonUsers);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(256, 369);
+            this.groupBox1.Size = new System.Drawing.Size(256, 278);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
             // 
-            // buttonViewPrivs
+            // buttonViewUserPrivileges
             // 
-            this.buttonViewPrivs.Location = new System.Drawing.Point(20, 230);
-            this.buttonViewPrivs.Name = "buttonViewPrivs";
-            this.buttonViewPrivs.Size = new System.Drawing.Size(220, 30);
-            this.buttonViewPrivs.TabIndex = 5;
-            this.buttonViewPrivs.Text = "Xem quyền";
-            this.buttonViewPrivs.UseVisualStyleBackColor = true;
-            this.buttonViewPrivs.Click += new System.EventHandler(this.buttonViewPrivs_Click);
+            this.buttonViewUserPrivileges.Location = new System.Drawing.Point(20, 230);
+            this.buttonViewUserPrivileges.Name = "buttonViewUserPrivileges";
+            this.buttonViewUserPrivileges.Size = new System.Drawing.Size(220, 30);
+            this.buttonViewUserPrivileges.TabIndex = 5;
+            this.buttonViewUserPrivileges.Text = "Xem quyền";
+            this.buttonViewUserPrivileges.UseVisualStyleBackColor = true;
+            this.buttonViewUserPrivileges.Click += new System.EventHandler(this.buttonViewUserPrivileges_Click);
             // 
             // buttonPrivileges
             // 
@@ -88,9 +91,9 @@ namespace DoAnATBM
             this.buttonPrivileges.Name = "buttonPrivileges";
             this.buttonPrivileges.Size = new System.Drawing.Size(220, 30);
             this.buttonPrivileges.TabIndex = 4;
-            this.buttonPrivileges.Text = "Cấp/thu hồi quyền";
+            this.buttonPrivileges.Text = "Cấp/Thu hồi quyền";
             this.buttonPrivileges.UseVisualStyleBackColor = true;
-            this.buttonPrivileges.Click += new System.EventHandler(this.buttonPrivileges_Click);
+            this.buttonPrivileges.Click += new System.EventHandler(this.buttonPrivileges_Click_1);
             // 
             // buttonAlterUser
             // 
@@ -197,12 +200,33 @@ namespace DoAnATBM
             this.buttonDropRole.UseVisualStyleBackColor = true;
             this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonViewData);
+            this.groupBox3.Location = new System.Drawing.Point(570, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(240, 80);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Bảng, view";
+            // 
+            // buttonViewData
+            // 
+            this.buttonViewData.Location = new System.Drawing.Point(20, 30);
+            this.buttonViewData.Name = "buttonViewData";
+            this.buttonViewData.Size = new System.Drawing.Size(200, 30);
+            this.buttonViewData.TabIndex = 0;
+            this.buttonViewData.Text = "Xem dữ liệu";
+            this.buttonViewData.UseVisualStyleBackColor = true;
+            this.buttonViewData.Click += new System.EventHandler(this.buttonViewData_Click);
+            // 
             // FromMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.MaximizeBox = false;
@@ -212,6 +236,7 @@ namespace DoAnATBM
             this.Load += new System.EventHandler(this.FromMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,7 +257,9 @@ namespace DoAnATBM
         private System.Windows.Forms.Button cap_thu_quyen;
         private System.Windows.Forms.Button buttonPrivileges;
         private System.Windows.Forms.Button buttonViewPrivs;
-        
+
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonViewData;
     }
 }
 

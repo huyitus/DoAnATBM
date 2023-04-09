@@ -99,5 +99,23 @@ namespace DoAnATBM
             FormRoleViewPrivs form = new FormRoleViewPrivs();
             form.Show();
         }
+
+        private void buttonPrivileges_Click_1(object sender, System.EventArgs e)
+        {
+            FormUserPrivileges form = new FormUserPrivileges();
+            form.Show();
+        }
+
+        private void buttonViewUserPrivileges_Click(object sender, System.EventArgs e)
+        {
+            FormUserViewPrivs form = new FormUserViewPrivs();
+            form.Show();
+        }
+
+        private void buttonViewData_Click(object sender, System.EventArgs e)
+        {
+            FormViewData form = new FormViewData();
+            form.Show();
+        }
     }
 }
