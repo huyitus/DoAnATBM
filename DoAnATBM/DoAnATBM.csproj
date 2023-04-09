@@ -127,6 +127,12 @@
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUserViewPrivs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserViewPrivs.Designer.cs">
+      <DependentUpon>FormUserViewPrivs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViewRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserViewPrivs.resx">
+      <DependentUpon>FormUserViewPrivs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewRoles.resx">
       <DependentUpon>FormViewRoles.cs</DependentUpon>

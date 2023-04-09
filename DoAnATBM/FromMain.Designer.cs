@@ -31,6 +31,7 @@ namespace DoAnATBM
         {
             this.ButtonUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonViewPrivs = new System.Windows.Forms.Button();
             this.buttonPrivileges = new System.Windows.Forms.Button();
             this.buttonAlterUser = new System.Windows.Forms.Button();
             this.buttonDropUser = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@ namespace DoAnATBM
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonViewPrivs);
             this.groupBox1.Controls.Add(this.buttonPrivileges);
             this.groupBox1.Controls.Add(this.buttonAlterUser);
             this.groupBox1.Controls.Add(this.buttonDropUser);
@@ -63,10 +65,20 @@ namespace DoAnATBM
             this.groupBox1.Controls.Add(this.ButtonUsers);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(256, 244);
+            this.groupBox1.Size = new System.Drawing.Size(256, 278);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
+            // 
+            // buttonViewPrivs
+            // 
+            this.buttonViewPrivs.Location = new System.Drawing.Point(20, 230);
+            this.buttonViewPrivs.Name = "buttonViewPrivs";
+            this.buttonViewPrivs.Size = new System.Drawing.Size(220, 30);
+            this.buttonViewPrivs.TabIndex = 5;
+            this.buttonViewPrivs.Text = "Xem quyền";
+            this.buttonViewPrivs.UseVisualStyleBackColor = true;
+            this.buttonViewPrivs.Click += new System.EventHandler(this.buttonViewPrivs_Click);
             // 
             // buttonPrivileges
             // 
@@ -191,6 +203,7 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonViewRoles;
         private System.Windows.Forms.Button buttonChangePW;
         private System.Windows.Forms.Button buttonPrivileges;
+        private System.Windows.Forms.Button buttonViewPrivs;
     }
 }
 

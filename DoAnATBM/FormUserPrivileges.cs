@@ -18,7 +18,7 @@ namespace DoAnATBM
 
         private void GrantSelectDelete(string priv)
         {
-            string user = "C##" + textUser.Text.ToUpper();
+            string user = textUser.Text.ToUpper();
             string table = textTable.Text;
             string grantOption = checkGrantOption.Checked ? "YES" : "NO";
 
@@ -42,7 +42,7 @@ namespace DoAnATBM
 
         private void GrantInsertUpdate(string priv)
         {
-            string user = "C##" + textUser.Text.ToUpper();
+            string user = textUser.Text.ToUpper();
             string table = textTable.Text;
             string grantOption = checkGrantOption.Checked ? "YES" : "NO";
             string column = textColumn.Text;
@@ -93,7 +93,7 @@ namespace DoAnATBM
 
         private void Revoke(string priv)
         {
-            string user = "C##" + textUser.Text.ToUpper();
+            string user = textUser.Text.ToUpper();
             string table = textTable.Text;
 
             OracleCommand cmd = new OracleCommand("Revoke_Priv_User", oracleConnection);
