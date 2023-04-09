@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using System.Diagnostics;
 
 namespace DoAnATBM
 {
@@ -131,6 +132,11 @@ namespace DoAnATBM
         private void buttonRevokeUpdate_Click(object sender, EventArgs e)
         {
             Revoke("update");
+        }
+
+        private void buttonTest_Click(object sender, EventArgs e)
+        {
+            Process.Start("sqlplus");
         }
     }
 }
