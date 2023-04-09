@@ -33,17 +33,21 @@ namespace DoAnATBM
             this.label1 = new System.Windows.Forms.Label();
             this.textUser = new System.Windows.Forms.TextBox();
             this.buttonView = new System.Windows.Forms.Button();
+            this.gridRoles = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridRoles)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView
             // 
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(10, 60);
+            this.gridView.Location = new System.Drawing.Point(10, 80);
             this.gridView.Name = "gridView";
             this.gridView.RowHeadersWidth = 51;
             this.gridView.RowTemplate.Height = 24;
-            this.gridView.Size = new System.Drawing.Size(780, 380);
+            this.gridView.Size = new System.Drawing.Size(780, 190);
             this.gridView.TabIndex = 0;
             this.gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellContentClick);
             // 
@@ -52,7 +56,7 @@ namespace DoAnATBM
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên người dùng:";
             // 
@@ -73,11 +77,42 @@ namespace DoAnATBM
             this.buttonView.UseVisualStyleBackColor = true;
             this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
+            // gridRoles
+            // 
+            this.gridRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridRoles.Location = new System.Drawing.Point(10, 300);
+            this.gridRoles.Name = "gridRoles";
+            this.gridRoles.RowHeadersWidth = 51;
+            this.gridRoles.RowTemplate.Height = 24;
+            this.gridRoles.Size = new System.Drawing.Size(780, 190);
+            this.gridRoles.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Quyền đã grant:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 280);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Role đã grant:";
+            // 
             // FormUserViewPrivs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.gridRoles);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.textUser);
             this.Controls.Add(this.label1);
@@ -87,6 +122,7 @@ namespace DoAnATBM
             this.Text = "FormUserViewPrivs";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUserViewPrivs_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,5 +134,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textUser;
         private System.Windows.Forms.Button buttonView;
+        private System.Windows.Forms.DataGridView gridRoles;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

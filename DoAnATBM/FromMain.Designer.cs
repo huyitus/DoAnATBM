@@ -129,7 +129,9 @@ namespace DoAnATBM
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.ThuHoiRole);
             this.groupBox2.Controls.Add(this.xem_quyen_btn);
+            this.groupBox2.Controls.Add(this.addRole2User);
             this.groupBox2.Controls.Add(this.cap_thu_quyen);
             this.groupBox2.Controls.Add(this.buttonViewRoles);
             this.groupBox2.Controls.Add(this.buttonCreateRole);
@@ -137,7 +139,7 @@ namespace DoAnATBM
             this.groupBox2.Controls.Add(this.buttonDropRole);
             this.groupBox2.Location = new System.Drawing.Point(298, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 278);
+            this.groupBox2.Size = new System.Drawing.Size(256, 358);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
@@ -206,7 +208,7 @@ namespace DoAnATBM
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonViewData);
-            this.groupBox3.Location = new System.Drawing.Point(28, 326);
+            this.groupBox3.Location = new System.Drawing.Point(580, 10);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(240, 80);
             this.groupBox3.TabIndex = 6;
@@ -225,7 +227,7 @@ namespace DoAnATBM
             // 
             // addRole2User
             // 
-            this.addRole2User.Location = new System.Drawing.Point(597, 42);
+            this.addRole2User.Location = new System.Drawing.Point(22, 268);
             this.addRole2User.Name = "addRole2User";
             this.addRole2User.Size = new System.Drawing.Size(220, 30);
             this.addRole2User.TabIndex = 7;
@@ -235,7 +237,7 @@ namespace DoAnATBM
             // 
             // ThuHoiRole
             // 
-            this.ThuHoiRole.Location = new System.Drawing.Point(597, 82);
+            this.ThuHoiRole.Location = new System.Drawing.Point(22, 308);
             this.ThuHoiRole.Name = "ThuHoiRole";
             this.ThuHoiRole.Size = new System.Drawing.Size(220, 30);
             this.ThuHoiRole.TabIndex = 8;
@@ -248,9 +250,7 @@ namespace DoAnATBM
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 450);
-            this.Controls.Add(this.ThuHoiRole);
-            this.Controls.Add(this.addRole2User);
+            this.ClientSize = new System.Drawing.Size(840, 386);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);

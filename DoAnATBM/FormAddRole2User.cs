@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
@@ -33,7 +26,7 @@ namespace DoAnATBM
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("cấp quyền thành công", "Thông báo");
+                MessageBox.Show("Cấp quyền thành công", "Thông báo");
             }
             catch (OracleException oe)
             {

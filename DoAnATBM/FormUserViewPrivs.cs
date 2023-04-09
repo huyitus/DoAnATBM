@@ -37,7 +37,25 @@ namespace DoAnATBM
             {
                 MessageBox.Show(oe.Message, "Lỗi");
             }
-            
+
+            queryString = "select granted_role from sys.dba_role_privs where grantee='" + textUser.Text.ToUpper() + "'";
+
+            try
+            {
+                var dataTable = new DataTable();
+
+                var dataAdapter = new OracleDataAdapter(queryString, oracleConnection);
+                dataAdapter.Fill(dataTable);
+
+                gridRoles.DataSource = dataTable;
+
+                dataAdapter.Dispose();
+                dataTable.Dispose();
+            }
+            catch (OracleException oe)
+            {
+                MessageBox.Show(oe.Message, "Lỗi");
+            }
         }
 
         private void FormUserViewPrivs_FormClosing(object sender, FormClosingEventArgs e)
