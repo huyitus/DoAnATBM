@@ -257,7 +257,7 @@ namespace DoAnATBM
         private System.Windows.Forms.Button cap_thu_quyen;
         private System.Windows.Forms.Button buttonPrivileges;
         private System.Windows.Forms.Button buttonViewPrivs;
-
+        private System.Windows.Forms.Button buttonViewUserPrivileges;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonViewData;
     }
