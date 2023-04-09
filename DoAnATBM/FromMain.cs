@@ -74,5 +74,20 @@ namespace DoAnATBM
         {
 
         }
+
+        private void button3_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button_phan_quyen(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button_pq_with_grand_option(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

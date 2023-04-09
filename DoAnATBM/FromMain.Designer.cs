@@ -35,10 +35,13 @@ namespace DoAnATBM
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDropRole = new System.Windows.Forms.Button();
+            this.buttonViewRoles = new System.Windows.Forms.Button();
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
-            this.buttonViewRoles = new System.Windows.Forms.Button();
+            this.buttonDropRole = new System.Windows.Forms.Button();
+            this.phan_quyen = new System.Windows.Forms.Button();
+            this.phan_quyen_w_grand_option = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +55,6 @@ namespace DoAnATBM
             this.ButtonUsers.Text = "Xem danh sách";
             this.ButtonUsers.UseVisualStyleBackColor = true;
             this.ButtonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
-
             // 
             // groupBox1
             // 
@@ -62,7 +64,7 @@ namespace DoAnATBM
             this.groupBox1.Controls.Add(this.ButtonUsers);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(256, 244);
+            this.groupBox1.Size = new System.Drawing.Size(256, 369);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
@@ -99,27 +101,29 @@ namespace DoAnATBM
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.phan_quyen_w_grand_option);
+            this.groupBox2.Controls.Add(this.phan_quyen);
             this.groupBox2.Controls.Add(this.buttonViewRoles);
             this.groupBox2.Controls.Add(this.buttonCreateRole);
             this.groupBox2.Controls.Add(this.buttonChangePW);
             this.groupBox2.Controls.Add(this.buttonDropRole);
             this.groupBox2.Location = new System.Drawing.Point(298, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 244);
+            this.groupBox2.Size = new System.Drawing.Size(256, 369);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
             // 
-            // buttonDropRole
+            // buttonViewRoles
             // 
-            this.buttonDropRole.Location = new System.Drawing.Point(20, 110);
-            this.buttonDropRole.Name = "buttonDropRole";
-            this.buttonDropRole.Size = new System.Drawing.Size(220, 30);
-            this.buttonDropRole.TabIndex = 5;
-            this.buttonDropRole.Text = "Xóa ";
-            this.buttonDropRole.UseVisualStyleBackColor = true;
-            this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
-
+            this.buttonViewRoles.Location = new System.Drawing.Point(20, 32);
+            this.buttonViewRoles.Name = "buttonViewRoles";
+            this.buttonViewRoles.Size = new System.Drawing.Size(220, 30);
+            this.buttonViewRoles.TabIndex = 7;
+            this.buttonViewRoles.Text = "Xem Danh Sách";
+            this.buttonViewRoles.UseVisualStyleBackColor = true;
+            this.buttonViewRoles.Click += new System.EventHandler(this.buttonViewRoles_Click);
             // 
             // buttonCreateRole
             // 
@@ -141,21 +145,52 @@ namespace DoAnATBM
             this.buttonChangePW.UseVisualStyleBackColor = true;
             this.buttonChangePW.Click += new System.EventHandler(this.buttonChangePW_Click);
             // 
-            // buttonViewRoles
+            // buttonDropRole
             // 
-            this.buttonViewRoles.Location = new System.Drawing.Point(20, 32);
-            this.buttonViewRoles.Name = "buttonViewRoles";
-            this.buttonViewRoles.Size = new System.Drawing.Size(220, 30);
-            this.buttonViewRoles.TabIndex = 7;
-            this.buttonViewRoles.Text = "Xem Danh Sách";
-            this.buttonViewRoles.UseVisualStyleBackColor = true;
-            this.buttonViewRoles.Click += new System.EventHandler(this.buttonViewRoles_Click);
+            this.buttonDropRole.Location = new System.Drawing.Point(20, 110);
+            this.buttonDropRole.Name = "buttonDropRole";
+            this.buttonDropRole.Size = new System.Drawing.Size(220, 30);
+            this.buttonDropRole.TabIndex = 5;
+            this.buttonDropRole.Text = "Xóa ";
+            this.buttonDropRole.UseVisualStyleBackColor = true;
+            this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
+            // 
+            // phan_quyen
+            // 
+            this.phan_quyen.Location = new System.Drawing.Point(20, 196);
+            this.phan_quyen.Name = "phan_quyen";
+            this.phan_quyen.Size = new System.Drawing.Size(220, 30);
+            this.phan_quyen.TabIndex = 6;
+            this.phan_quyen.Text = "Phân quyền";
+            this.phan_quyen.UseVisualStyleBackColor = true;
+            this.phan_quyen.Click += new System.EventHandler(this.button_phan_quyen);
+            // 
+            // phan_quyen_w_grand_option
+            // 
+            this.phan_quyen_w_grand_option.Location = new System.Drawing.Point(20, 242);
+            this.phan_quyen_w_grand_option.Name = "phan_quyen_w_grand_option";
+            this.phan_quyen_w_grand_option.Size = new System.Drawing.Size(220, 30);
+            this.phan_quyen_w_grand_option.TabIndex = 8;
+            this.phan_quyen_w_grand_option.Text = "Phân quyền with Grant option";
+            this.phan_quyen_w_grand_option.UseVisualStyleBackColor = true;
+            this.phan_quyen_w_grand_option.Click += new System.EventHandler(this.button_pq_with_grand_option);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(20, 287);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 32);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Thu hồi quyền";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FromMain
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(884, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "FromMain";
@@ -180,7 +215,9 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonDropRole;
         private System.Windows.Forms.Button buttonViewRoles;
         private System.Windows.Forms.Button buttonChangePW;
-
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button phan_quyen_w_grand_option;
+        private System.Windows.Forms.Button phan_quyen;
     }
 }
 
