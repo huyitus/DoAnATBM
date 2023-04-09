@@ -115,6 +115,18 @@
     <Compile Include="FormDropUser.Designer.cs">
       <DependentUpon>FormDropUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRolePrivileges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRolePrivileges.Designer.cs">
+      <DependentUpon>FormRolePrivileges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoleViewPrivs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoleViewPrivs.Designer.cs">
+      <DependentUpon>FormRoleViewPrivs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUserPrivileges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDropUser.resx">
       <DependentUpon>FormDropUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRolePrivileges.resx">
+      <DependentUpon>FormRolePrivileges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoleViewPrivs.resx">
+      <DependentUpon>FormRoleViewPrivs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserPrivileges.resx">
       <DependentUpon>FormUserPrivileges.cs</DependentUpon>

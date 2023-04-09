@@ -1,7 +1,6 @@
-﻿
-namespace DoAnATBM
+﻿namespace DoAnATBM
 {
-    partial class FormUserPrivileges
+    partial class FormRolePrivileges
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +30,7 @@ namespace DoAnATBM
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textUser = new System.Windows.Forms.TextBox();
+            this.textRole = new System.Windows.Forms.TextBox();
             this.textTable = new System.Windows.Forms.TextBox();
             this.checkGrantOption = new System.Windows.Forms.CheckBox();
             this.buttonSelect = new System.Windows.Forms.Button();
@@ -59,9 +58,9 @@ namespace DoAnATBM
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên người dùng:";
+            this.label1.Text = "Tên Role:";
             // 
             // label2
             // 
@@ -72,12 +71,13 @@ namespace DoAnATBM
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên bảng:";
             // 
-            // textUser
+            // textRole
             // 
-            this.textUser.Location = new System.Drawing.Point(140, 20);
-            this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(190, 22);
-            this.textUser.TabIndex = 2;
+            this.textRole.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.textRole.Location = new System.Drawing.Point(140, 20);
+            this.textRole.Name = "textRole";
+            this.textRole.Size = new System.Drawing.Size(190, 22);
+            this.textRole.TabIndex = 2;
             // 
             // textTable
             // 
@@ -252,7 +252,7 @@ namespace DoAnATBM
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
-            // FormUserPrivileges
+            // FormRolePrivileges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,14 +261,14 @@ namespace DoAnATBM
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textTable);
-            this.Controls.Add(this.textUser);
+            this.Controls.Add(this.textRole);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.Name = "FormUserPrivileges";
-            this.Text = "Cấp/thu hồi quyền người dùng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUserPrivileges_FormClosing);
-            this.Load += new System.EventHandler(this.FormUserPrivileges_Load);
+            this.Name = "FormRolePrivileges";
+            this.Text = "Cấp/thu hồi quyền cho Role";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRolePrivileges_FormClosing);
+            this.Load += new System.EventHandler(this.FormRolePrivileges_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -283,7 +283,7 @@ namespace DoAnATBM
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textUser;
+        private System.Windows.Forms.TextBox textRole;
         private System.Windows.Forms.TextBox textTable;
         private System.Windows.Forms.CheckBox checkGrantOption;
         private System.Windows.Forms.Button buttonSelect;
@@ -301,5 +301,11 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonRevokeDelete;
         private System.Windows.Forms.Button buttonRevokeSelect;
         private System.Windows.Forms.Button buttonTest;
+    
+
+
+
+
+        
     }
 }

@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
 namespace DoAnATBM
 {
-    public partial class FormUserViewPrivs : Form
+    public partial class FormRoleViewPrivs : Form
     {
-        private readonly OracleConnection oracleConnection;
 
-        public FormUserViewPrivs()
+        private readonly OracleConnection oracleConnection;
+        public FormRoleViewPrivs()
         {
             InitializeComponent();
 
@@ -17,9 +23,14 @@ namespace DoAnATBM
             oracleConnection.Open();
         }
 
+        private void FormRoleViewPrivs_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonView_Click(object sender, EventArgs e)
         {
-            var queryString = "select * from dba_tab_privs where GRANTEE = '" + textUser.Text.ToUpper() + "'";
+            var queryString = "select * from dba_role_privs where granted_role = '" + textRole.Text.ToUpper() + "'";
 
             try
             {
@@ -37,10 +48,10 @@ namespace DoAnATBM
             {
                 MessageBox.Show(oe.Message, "Lỗi");
             }
-            
+
         }
 
-        private void FormUserViewPrivs_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormRoleViewPrivs_FormClosing(object sender, FormClosingEventArgs e)
         {
             Global.DisposeConnection(oracleConnection);
         }

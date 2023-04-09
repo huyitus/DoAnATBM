@@ -83,24 +83,21 @@ namespace DoAnATBM
             form.Show();
         }
 
-        private void button3_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void button_phan_quyen(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void button_pq_with_grand_option(object sender, System.EventArgs e)
-        {
-
-        }
-
         private void FromMain_Load(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void button_cap_thu_quyen(object sender, System.EventArgs e)
+        {
+            FormRolePrivileges form = new FormRolePrivileges();
+            form.Show();
+        }
+
+        private void xem_quyen_btn_Click(object sender, System.EventArgs e)
+        {
+            FormRoleViewPrivs form = new FormRoleViewPrivs();
+            form.Show();
         }
     }
 }

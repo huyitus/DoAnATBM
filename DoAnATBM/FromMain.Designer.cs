@@ -37,9 +37,8 @@ namespace DoAnATBM
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.phan_quyen_w_grand_option = new System.Windows.Forms.Button();
-            this.phan_quyen = new System.Windows.Forms.Button();
+            this.xem_quyen_btn = new System.Windows.Forms.Button();
+            this.cap_thu_quyen = new System.Windows.Forms.Button();
             this.buttonViewRoles = new System.Windows.Forms.Button();
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
@@ -125,9 +124,8 @@ namespace DoAnATBM
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.phan_quyen_w_grand_option);
-            this.groupBox2.Controls.Add(this.phan_quyen);
+            this.groupBox2.Controls.Add(this.xem_quyen_btn);
+            this.groupBox2.Controls.Add(this.cap_thu_quyen);
             this.groupBox2.Controls.Add(this.buttonViewRoles);
             this.groupBox2.Controls.Add(this.buttonCreateRole);
             this.groupBox2.Controls.Add(this.buttonChangePW);
@@ -139,35 +137,25 @@ namespace DoAnATBM
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
             // 
-            // button3
+            // xem_quyen_btn
             // 
-            this.button3.Location = new System.Drawing.Point(20, 287);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(220, 32);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Thu hồi quyền";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.xem_quyen_btn.Location = new System.Drawing.Point(20, 229);
+            this.xem_quyen_btn.Name = "xem_quyen_btn";
+            this.xem_quyen_btn.Size = new System.Drawing.Size(220, 31);
+            this.xem_quyen_btn.TabIndex = 9;
+            this.xem_quyen_btn.Text = "Xem quyền";
+            this.xem_quyen_btn.UseVisualStyleBackColor = true;
+            this.xem_quyen_btn.Click += new System.EventHandler(this.xem_quyen_btn_Click);
             // 
-            // phan_quyen_w_grand_option
+            // cap_thu_quyen
             // 
-            this.phan_quyen_w_grand_option.Location = new System.Drawing.Point(20, 242);
-            this.phan_quyen_w_grand_option.Name = "phan_quyen_w_grand_option";
-            this.phan_quyen_w_grand_option.Size = new System.Drawing.Size(220, 30);
-            this.phan_quyen_w_grand_option.TabIndex = 8;
-            this.phan_quyen_w_grand_option.Text = "Phân quyền with Grant option";
-            this.phan_quyen_w_grand_option.UseVisualStyleBackColor = true;
-            this.phan_quyen_w_grand_option.Click += new System.EventHandler(this.button_pq_with_grand_option);
-            // 
-            // phan_quyen
-            // 
-            this.phan_quyen.Location = new System.Drawing.Point(20, 196);
-            this.phan_quyen.Name = "phan_quyen";
-            this.phan_quyen.Size = new System.Drawing.Size(220, 30);
-            this.phan_quyen.TabIndex = 6;
-            this.phan_quyen.Text = "Phân quyền";
-            this.phan_quyen.UseVisualStyleBackColor = true;
-            this.phan_quyen.Click += new System.EventHandler(this.button_phan_quyen);
+            this.cap_thu_quyen.Location = new System.Drawing.Point(20, 190);
+            this.cap_thu_quyen.Name = "cap_thu_quyen";
+            this.cap_thu_quyen.Size = new System.Drawing.Size(220, 30);
+            this.cap_thu_quyen.TabIndex = 6;
+            this.cap_thu_quyen.Text = "Cấp/thu hồi quyền";
+            this.cap_thu_quyen.UseVisualStyleBackColor = true;
+            this.cap_thu_quyen.Click += new System.EventHandler(this.button_cap_thu_quyen);
             // 
             // buttonViewRoles
             // 
@@ -240,9 +228,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonDropRole;
         private System.Windows.Forms.Button buttonViewRoles;
         private System.Windows.Forms.Button buttonChangePW;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button phan_quyen_w_grand_option;
-        private System.Windows.Forms.Button phan_quyen;
+        private System.Windows.Forms.Button xem_quyen_btn;
+        private System.Windows.Forms.Button cap_thu_quyen;
         private System.Windows.Forms.Button buttonPrivileges;
         private System.Windows.Forms.Button buttonViewPrivs;
         

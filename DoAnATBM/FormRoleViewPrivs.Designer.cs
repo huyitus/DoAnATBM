@@ -1,7 +1,6 @@
-﻿
-namespace DoAnATBM
+﻿namespace DoAnATBM
 {
-    partial class FormUserViewPrivs
+    partial class FormRoleViewPrivs
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +30,7 @@ namespace DoAnATBM
         {
             this.gridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textUser = new System.Windows.Forms.TextBox();
+            this.textRole = new System.Windows.Forms.TextBox();
             this.buttonView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -52,16 +51,16 @@ namespace DoAnATBM
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tên người dùng:";
+            this.label1.Text = "Tên Role:";
             // 
-            // textUser
+            // textRole
             // 
-            this.textUser.Location = new System.Drawing.Point(130, 20);
-            this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(210, 22);
-            this.textUser.TabIndex = 2;
+            this.textRole.Location = new System.Drawing.Point(130, 20);
+            this.textRole.Name = "textRole";
+            this.textRole.Size = new System.Drawing.Size(210, 22);
+            this.textRole.TabIndex = 2;
             // 
             // buttonView
             // 
@@ -73,30 +72,28 @@ namespace DoAnATBM
             this.buttonView.UseVisualStyleBackColor = true;
             this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
-            // FormUserViewPrivs
+            // FormRoleViewPrivs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonView);
-            this.Controls.Add(this.textUser);
+            this.Controls.Add(this.textRole);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridView);
             this.MaximizeBox = false;
-            this.Name = "FormUserViewPrivs";
-            this.Text = "FormUserViewPrivs";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUserViewPrivs_FormClosing);
+            this.Name = "FormRoleViewPrivs";
+            this.Text = "Xem quyền của Role";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRoleViewPrivs_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        #endregion
-
         private System.Windows.Forms.DataGridView gridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textUser;
+        private System.Windows.Forms.TextBox textRole;
         private System.Windows.Forms.Button buttonView;
+        #endregion
     }
 }
