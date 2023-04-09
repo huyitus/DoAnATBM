@@ -25,7 +25,7 @@ namespace DoAnATBM
         {
             OracleCommand cmd = new OracleCommand("Alter_User", oracleConnection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("User_name", OracleDbType.Varchar2).Value = "C##" + textName.Text.ToUpper();
+            cmd.Parameters.Add("User_name", OracleDbType.Varchar2).Value = textName.Text.ToUpper();
             cmd.Parameters.Add("Pass_Word", OracleDbType.Varchar2).Value = textPass.Text;
 
             try
