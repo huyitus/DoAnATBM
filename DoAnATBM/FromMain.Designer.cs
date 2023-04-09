@@ -44,8 +44,11 @@ namespace DoAnATBM
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
             this.buttonDropRole = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonViewData = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ButtonUsers
@@ -68,7 +71,7 @@ namespace DoAnATBM
             this.groupBox1.Controls.Add(this.ButtonUsers);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(256, 369);
+            this.groupBox1.Size = new System.Drawing.Size(256, 278);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
@@ -209,12 +212,33 @@ namespace DoAnATBM
             this.buttonDropRole.UseVisualStyleBackColor = true;
             this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonViewData);
+            this.groupBox3.Location = new System.Drawing.Point(570, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(240, 80);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Bảng, view";
+            // 
+            // buttonViewData
+            // 
+            this.buttonViewData.Location = new System.Drawing.Point(20, 30);
+            this.buttonViewData.Name = "buttonViewData";
+            this.buttonViewData.Size = new System.Drawing.Size(200, 30);
+            this.buttonViewData.TabIndex = 0;
+            this.buttonViewData.Text = "Xem dữ liệu";
+            this.buttonViewData.UseVisualStyleBackColor = true;
+            this.buttonViewData.Click += new System.EventHandler(this.buttonViewData_Click);
+            // 
             // FromMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.MaximizeBox = false;
@@ -223,6 +247,7 @@ namespace DoAnATBM
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FromMain_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -244,6 +269,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Button phan_quyen;
         private System.Windows.Forms.Button buttonPrivileges;
         private System.Windows.Forms.Button buttonViewUserPrivileges;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonViewData;
     }
 }
 

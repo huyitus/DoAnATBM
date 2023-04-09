@@ -109,5 +109,11 @@ namespace DoAnATBM
             FormUserViewPrivs form = new FormUserViewPrivs();
             form.Show();
         }
+
+        private void buttonViewData_Click(object sender, System.EventArgs e)
+        {
+            FormViewData form = new FormViewData();
+            form.Show();
+        }
     }
 }
