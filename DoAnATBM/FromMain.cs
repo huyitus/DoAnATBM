@@ -97,5 +97,10 @@ namespace DoAnATBM
         {
 
         }
+
+        private void FromMain_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

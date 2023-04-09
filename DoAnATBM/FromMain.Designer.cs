@@ -37,13 +37,13 @@ namespace DoAnATBM
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.phan_quyen_w_grand_option = new System.Windows.Forms.Button();
+            this.phan_quyen = new System.Windows.Forms.Button();
             this.buttonViewRoles = new System.Windows.Forms.Button();
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
             this.buttonDropRole = new System.Windows.Forms.Button();
-            this.phan_quyen = new System.Windows.Forms.Button();
-            this.phan_quyen_w_grand_option = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +139,36 @@ namespace DoAnATBM
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(20, 287);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 32);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Thu hồi quyền";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // phan_quyen_w_grand_option
+            // 
+            this.phan_quyen_w_grand_option.Location = new System.Drawing.Point(20, 242);
+            this.phan_quyen_w_grand_option.Name = "phan_quyen_w_grand_option";
+            this.phan_quyen_w_grand_option.Size = new System.Drawing.Size(220, 30);
+            this.phan_quyen_w_grand_option.TabIndex = 8;
+            this.phan_quyen_w_grand_option.Text = "Phân quyền with Grant option";
+            this.phan_quyen_w_grand_option.UseVisualStyleBackColor = true;
+            this.phan_quyen_w_grand_option.Click += new System.EventHandler(this.button_pq_with_grand_option);
+            // 
+            // phan_quyen
+            // 
+            this.phan_quyen.Location = new System.Drawing.Point(20, 196);
+            this.phan_quyen.Name = "phan_quyen";
+            this.phan_quyen.Size = new System.Drawing.Size(220, 30);
+            this.phan_quyen.TabIndex = 6;
+            this.phan_quyen.Text = "Phân quyền";
+            this.phan_quyen.UseVisualStyleBackColor = true;
+            this.phan_quyen.Click += new System.EventHandler(this.button_phan_quyen);
+            // 
             // buttonViewRoles
             // 
             this.buttonViewRoles.Location = new System.Drawing.Point(20, 32);
@@ -179,36 +209,6 @@ namespace DoAnATBM
             this.buttonDropRole.UseVisualStyleBackColor = true;
             this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
             // 
-            // phan_quyen
-            // 
-            this.phan_quyen.Location = new System.Drawing.Point(20, 196);
-            this.phan_quyen.Name = "phan_quyen";
-            this.phan_quyen.Size = new System.Drawing.Size(220, 30);
-            this.phan_quyen.TabIndex = 6;
-            this.phan_quyen.Text = "Phân quyền";
-            this.phan_quyen.UseVisualStyleBackColor = true;
-            this.phan_quyen.Click += new System.EventHandler(this.button_phan_quyen);
-            // 
-            // phan_quyen_w_grand_option
-            // 
-            this.phan_quyen_w_grand_option.Location = new System.Drawing.Point(20, 242);
-            this.phan_quyen_w_grand_option.Name = "phan_quyen_w_grand_option";
-            this.phan_quyen_w_grand_option.Size = new System.Drawing.Size(220, 30);
-            this.phan_quyen_w_grand_option.TabIndex = 8;
-            this.phan_quyen_w_grand_option.Text = "Phân quyền with Grant option";
-            this.phan_quyen_w_grand_option.UseVisualStyleBackColor = true;
-            this.phan_quyen_w_grand_option.Click += new System.EventHandler(this.button_pq_with_grand_option);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(20, 287);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(220, 32);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Thu hồi quyền";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // FromMain
             // 
             this.AllowDrop = true;
@@ -221,6 +221,7 @@ namespace DoAnATBM
             this.Name = "FromMain";
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FromMain_FormClosing);
+            this.Load += new System.EventHandler(this.FromMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -242,6 +243,9 @@ namespace DoAnATBM
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button phan_quyen_w_grand_option;
         private System.Windows.Forms.Button phan_quyen;
+        private System.Windows.Forms.Button buttonPrivileges;
+        private System.Windows.Forms.Button buttonViewPrivs;
+        
     }
 }
 
