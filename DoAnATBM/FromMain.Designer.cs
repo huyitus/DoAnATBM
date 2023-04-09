@@ -31,19 +31,19 @@ namespace DoAnATBM
         {
             this.ButtonUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonViewPrivs = new System.Windows.Forms.Button();
+            this.buttonViewUserPrivileges = new System.Windows.Forms.Button();
             this.buttonPrivileges = new System.Windows.Forms.Button();
             this.buttonAlterUser = new System.Windows.Forms.Button();
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.phan_quyen_w_grand_option = new System.Windows.Forms.Button();
+            this.phan_quyen = new System.Windows.Forms.Button();
             this.buttonViewRoles = new System.Windows.Forms.Button();
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
             this.buttonDropRole = new System.Windows.Forms.Button();
-            this.phan_quyen = new System.Windows.Forms.Button();
-            this.phan_quyen_w_grand_option = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@ namespace DoAnATBM
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonViewPrivs);
+            this.groupBox1.Controls.Add(this.buttonViewUserPrivileges);
             this.groupBox1.Controls.Add(this.buttonPrivileges);
             this.groupBox1.Controls.Add(this.buttonAlterUser);
             this.groupBox1.Controls.Add(this.buttonDropUser);
@@ -73,15 +73,15 @@ namespace DoAnATBM
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
             // 
-            // buttonViewPrivs
+            // buttonViewUserPrivileges
             // 
-            this.buttonViewPrivs.Location = new System.Drawing.Point(20, 230);
-            this.buttonViewPrivs.Name = "buttonViewPrivs";
-            this.buttonViewPrivs.Size = new System.Drawing.Size(220, 30);
-            this.buttonViewPrivs.TabIndex = 5;
-            this.buttonViewPrivs.Text = "Xem quyền";
-            this.buttonViewPrivs.UseVisualStyleBackColor = true;
-            this.buttonViewPrivs.Click += new System.EventHandler(this.buttonViewPrivs_Click);
+            this.buttonViewUserPrivileges.Location = new System.Drawing.Point(20, 230);
+            this.buttonViewUserPrivileges.Name = "buttonViewUserPrivileges";
+            this.buttonViewUserPrivileges.Size = new System.Drawing.Size(220, 30);
+            this.buttonViewUserPrivileges.TabIndex = 5;
+            this.buttonViewUserPrivileges.Text = "Xem quyền";
+            this.buttonViewUserPrivileges.UseVisualStyleBackColor = true;
+            this.buttonViewUserPrivileges.Click += new System.EventHandler(this.buttonViewUserPrivileges_Click);
             // 
             // buttonPrivileges
             // 
@@ -89,9 +89,9 @@ namespace DoAnATBM
             this.buttonPrivileges.Name = "buttonPrivileges";
             this.buttonPrivileges.Size = new System.Drawing.Size(220, 30);
             this.buttonPrivileges.TabIndex = 4;
-            this.buttonPrivileges.Text = "Cấp/thu hồi quyền";
+            this.buttonPrivileges.Text = "Cấp/Thu hồi quyền";
             this.buttonPrivileges.UseVisualStyleBackColor = true;
-            this.buttonPrivileges.Click += new System.EventHandler(this.buttonPrivileges_Click);
+            this.buttonPrivileges.Click += new System.EventHandler(this.buttonPrivileges_Click_1);
             // 
             // buttonAlterUser
             // 
@@ -139,6 +139,36 @@ namespace DoAnATBM
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(20, 287);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 32);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Thu hồi quyền";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // phan_quyen_w_grand_option
+            // 
+            this.phan_quyen_w_grand_option.Location = new System.Drawing.Point(20, 242);
+            this.phan_quyen_w_grand_option.Name = "phan_quyen_w_grand_option";
+            this.phan_quyen_w_grand_option.Size = new System.Drawing.Size(220, 30);
+            this.phan_quyen_w_grand_option.TabIndex = 8;
+            this.phan_quyen_w_grand_option.Text = "Phân quyền with Grant option";
+            this.phan_quyen_w_grand_option.UseVisualStyleBackColor = true;
+            this.phan_quyen_w_grand_option.Click += new System.EventHandler(this.button_pq_with_grand_option);
+            // 
+            // phan_quyen
+            // 
+            this.phan_quyen.Location = new System.Drawing.Point(20, 196);
+            this.phan_quyen.Name = "phan_quyen";
+            this.phan_quyen.Size = new System.Drawing.Size(220, 30);
+            this.phan_quyen.TabIndex = 6;
+            this.phan_quyen.Text = "Phân quyền";
+            this.phan_quyen.UseVisualStyleBackColor = true;
+            this.phan_quyen.Click += new System.EventHandler(this.button_phan_quyen);
+            // 
             // buttonViewRoles
             // 
             this.buttonViewRoles.Location = new System.Drawing.Point(20, 32);
@@ -179,36 +209,6 @@ namespace DoAnATBM
             this.buttonDropRole.UseVisualStyleBackColor = true;
             this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
             // 
-            // phan_quyen
-            // 
-            this.phan_quyen.Location = new System.Drawing.Point(20, 196);
-            this.phan_quyen.Name = "phan_quyen";
-            this.phan_quyen.Size = new System.Drawing.Size(220, 30);
-            this.phan_quyen.TabIndex = 6;
-            this.phan_quyen.Text = "Phân quyền";
-            this.phan_quyen.UseVisualStyleBackColor = true;
-            this.phan_quyen.Click += new System.EventHandler(this.button_phan_quyen);
-            // 
-            // phan_quyen_w_grand_option
-            // 
-            this.phan_quyen_w_grand_option.Location = new System.Drawing.Point(20, 242);
-            this.phan_quyen_w_grand_option.Name = "phan_quyen_w_grand_option";
-            this.phan_quyen_w_grand_option.Size = new System.Drawing.Size(220, 30);
-            this.phan_quyen_w_grand_option.TabIndex = 8;
-            this.phan_quyen_w_grand_option.Text = "Phân quyền with Grant option";
-            this.phan_quyen_w_grand_option.UseVisualStyleBackColor = true;
-            this.phan_quyen_w_grand_option.Click += new System.EventHandler(this.button_pq_with_grand_option);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(20, 287);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(220, 32);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Thu hồi quyền";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // FromMain
             // 
             this.AllowDrop = true;
@@ -242,6 +242,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button phan_quyen_w_grand_option;
         private System.Windows.Forms.Button phan_quyen;
+        private System.Windows.Forms.Button buttonPrivileges;
+        private System.Windows.Forms.Button buttonViewUserPrivileges;
     }
 }
 
