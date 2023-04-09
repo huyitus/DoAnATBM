@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
@@ -30,7 +23,7 @@ namespace DoAnATBM
         {
             OracleCommand cmd = new OracleCommand("drop_role", oracleConnection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("role_name", OracleDbType.Varchar2).Value = "C##" + textName.Text;
+            cmd.Parameters.Add("role_name", OracleDbType.Varchar2).Value = textName.Text;
 
             try
             {

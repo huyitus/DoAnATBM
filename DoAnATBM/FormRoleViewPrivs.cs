@@ -30,7 +30,7 @@ namespace DoAnATBM
 
         private void buttonView_Click(object sender, EventArgs e)
         {
-            var queryString = "select * from dba_role_privs where granted_role = '" + textRole.Text.ToUpper() + "'";
+            var queryString = "select * from role_tab_privs where role='" + textRole.Text.ToUpper() + "'";
 
             try
             {

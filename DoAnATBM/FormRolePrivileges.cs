@@ -24,54 +24,22 @@ namespace DoAnATBM
             oracleConnection.Open();
         }
 
-        private void GrantSelectDelete(string priv)
-        {
-            string user = textRole.Text.ToUpper();
-            string table = textTable.Text;
-            string grantOption = checkGrantOption.Checked ? "YES" : "NO";
-
-            OracleCommand cmd = new OracleCommand("Grant_Priv_User1", oracleConnection);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("User_Name", OracleDbType.Varchar2).Value = user;
-            cmd.Parameters.Add("priv", OracleDbType.Varchar2).Value = priv;
-            cmd.Parameters.Add("table_name", OracleDbType.Varchar2).Value = table;
-            cmd.Parameters.Add("grant_option", OracleDbType.Varchar2).Value = grantOption;
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thành công", "Thông báo");
-            }
-            catch (OracleException oe)
-            {
-                MessageBox.Show(oe.Message, "Lỗi");
-            }
-        }
-        private void GrantInsertUpdate(string priv)
+        private void Grant(string priv, bool grantOption)
         {
             string role = textRole.Text.ToUpper();
             string table = textTable.Text;
-            string grantOption = checkGrantOption.Checked ? "YES" : "NO";
-            string column = textColumn.Text;
 
-            OracleCommand cmd;
-            if (grantOption == "YES")
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = oracleConnection;
+            cmd.CommandType = CommandType.Text;
+
+            if (grantOption)
             {
-                cmd = new OracleCommand("grant_privilege_to_role", oracleConnection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add("role_name", OracleDbType.Varchar2).Value = role;
-                cmd.Parameters.Add("privilege_name", OracleDbType.Varchar2).Value = priv;
-                cmd.Parameters.Add("table_name", OracleDbType.Varchar2).Value = table;
+                cmd.CommandText = "grant " + priv + " on " + table + " to " + role + " with grant option";
             }
             else
             {
-                cmd = new OracleCommand("grant_priv_to_role_with_grant_option", oracleConnection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add("role_name", OracleDbType.Varchar2).Value = role;
-                cmd.Parameters.Add("privilege_name", OracleDbType.Varchar2).Value = priv;
-                cmd.Parameters.Add("table_name", OracleDbType.Varchar2).Value = table;
-                cmd.Parameters.Add("col_name", OracleDbType.Varchar2).Value = column;
-                cmd.Parameters.Add("grant_option", OracleDbType.Varchar2).Value = " with grant option";
+                cmd.CommandText = "grant " + priv + " on " + table + " to " + role;
             }
 
             try
@@ -87,22 +55,22 @@ namespace DoAnATBM
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            GrantInsertUpdate("insert");
+            Grant("insert", checkGrantOption.Checked);
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            GrantInsertUpdate("update");
+            Grant("update", checkGrantOption.Checked);
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
         {
-            GrantSelectDelete("select");
+            Grant("select", checkGrantOption.Checked);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            GrantSelectDelete("delete");
+            Grant("delete", checkGrantOption.Checked);
         }
 
         private void FormRolePrivileges_FormClosing(object sender, FormClosingEventArgs e)
