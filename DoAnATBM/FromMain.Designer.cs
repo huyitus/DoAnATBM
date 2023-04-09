@@ -45,6 +45,8 @@ namespace DoAnATBM
             this.buttonDropRole = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonViewData = new System.Windows.Forms.Button();
+            this.addRole2User = new System.Windows.Forms.Button();
+            this.ThuHoiRole = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -139,6 +141,7 @@ namespace DoAnATBM
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // xem_quyen_btn
             // 
@@ -203,7 +206,7 @@ namespace DoAnATBM
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonViewData);
-            this.groupBox3.Location = new System.Drawing.Point(570, 10);
+            this.groupBox3.Location = new System.Drawing.Point(28, 326);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(240, 80);
             this.groupBox3.TabIndex = 6;
@@ -220,12 +223,34 @@ namespace DoAnATBM
             this.buttonViewData.UseVisualStyleBackColor = true;
             this.buttonViewData.Click += new System.EventHandler(this.buttonViewData_Click);
             // 
+            // addRole2User
+            // 
+            this.addRole2User.Location = new System.Drawing.Point(597, 42);
+            this.addRole2User.Name = "addRole2User";
+            this.addRole2User.Size = new System.Drawing.Size(220, 30);
+            this.addRole2User.TabIndex = 7;
+            this.addRole2User.Text = "Thêm Role cho User";
+            this.addRole2User.UseVisualStyleBackColor = true;
+            this.addRole2User.Click += new System.EventHandler(this.button_addRole2User);
+            // 
+            // ThuHoiRole
+            // 
+            this.ThuHoiRole.Location = new System.Drawing.Point(597, 82);
+            this.ThuHoiRole.Name = "ThuHoiRole";
+            this.ThuHoiRole.Size = new System.Drawing.Size(220, 30);
+            this.ThuHoiRole.TabIndex = 8;
+            this.ThuHoiRole.Text = "Thu hồi role ";
+            this.ThuHoiRole.UseVisualStyleBackColor = true;
+            this.ThuHoiRole.Click += new System.EventHandler(this.button_ThuHoiRole);
+            // 
             // FromMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.ThuHoiRole);
+            this.Controls.Add(this.addRole2User);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -260,6 +285,8 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonViewUserPrivileges;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonViewData;
+        private System.Windows.Forms.Button addRole2User;
+        private System.Windows.Forms.Button ThuHoiRole;
     }
 }
 

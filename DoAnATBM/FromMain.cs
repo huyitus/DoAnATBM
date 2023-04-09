@@ -117,5 +117,24 @@ namespace DoAnATBM
             FormViewData form = new FormViewData();
             form.Show();
         }
+
+    
+
+        private void button_addRole2User(object sender, System.EventArgs e)
+        {
+            FormAddRole2User form = new FormAddRole2User();
+            form.Show();
+        }
+
+        private void button_ThuHoiRole(object sender, System.EventArgs e)
+        {
+            FormRevokeRole2User form = new FormRevokeRole2User();
+            form.Show();
+        }
+
+        private void groupBox2_Enter(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

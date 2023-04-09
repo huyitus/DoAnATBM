@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddRole2User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRole2User.Designer.cs">
+      <DependentUpon>FormAddRole2User.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAlterUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="FormDropUser.Designer.cs">
       <DependentUpon>FormDropUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRevokeRole2User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRevokeRole2User.Designer.cs">
+      <DependentUpon>FormRevokeRole2User.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRolePrivileges.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,9 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddRole2User.resx">
+      <DependentUpon>FormAddRole2User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAlterUser.resx">
       <DependentUpon>FormAlterUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDropUser.resx">
       <DependentUpon>FormDropUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRevokeRole2User.resx">
+      <DependentUpon>FormRevokeRole2User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRolePrivileges.resx">
       <DependentUpon>FormRolePrivileges.cs</DependentUpon>

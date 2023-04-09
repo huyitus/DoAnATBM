@@ -37,5 +37,10 @@ namespace DoAnATBM
         {
             Global.DisposeConnection(oracleConnection);
         }
+
+        private void UsersGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
