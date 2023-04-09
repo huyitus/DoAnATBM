@@ -31,6 +31,8 @@ namespace DoAnATBM
         {
             this.ButtonUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonViewPrivs = new System.Windows.Forms.Button();
+            this.buttonPrivileges = new System.Windows.Forms.Button();
             this.buttonAlterUser = new System.Windows.Forms.Button();
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
@@ -58,6 +60,8 @@ namespace DoAnATBM
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonViewPrivs);
+            this.groupBox1.Controls.Add(this.buttonPrivileges);
             this.groupBox1.Controls.Add(this.buttonAlterUser);
             this.groupBox1.Controls.Add(this.buttonDropUser);
             this.groupBox1.Controls.Add(this.buttonCreateUser);
@@ -68,6 +72,26 @@ namespace DoAnATBM
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
+            // 
+            // buttonViewPrivs
+            // 
+            this.buttonViewPrivs.Location = new System.Drawing.Point(20, 230);
+            this.buttonViewPrivs.Name = "buttonViewPrivs";
+            this.buttonViewPrivs.Size = new System.Drawing.Size(220, 30);
+            this.buttonViewPrivs.TabIndex = 5;
+            this.buttonViewPrivs.Text = "Xem quyền";
+            this.buttonViewPrivs.UseVisualStyleBackColor = true;
+            this.buttonViewPrivs.Click += new System.EventHandler(this.buttonViewPrivs_Click);
+            // 
+            // buttonPrivileges
+            // 
+            this.buttonPrivileges.Location = new System.Drawing.Point(20, 190);
+            this.buttonPrivileges.Name = "buttonPrivileges";
+            this.buttonPrivileges.Size = new System.Drawing.Size(220, 30);
+            this.buttonPrivileges.TabIndex = 4;
+            this.buttonPrivileges.Text = "Cấp/thu hồi quyền";
+            this.buttonPrivileges.UseVisualStyleBackColor = true;
+            this.buttonPrivileges.Click += new System.EventHandler(this.buttonPrivileges_Click);
             // 
             // buttonAlterUser
             // 
@@ -193,10 +217,10 @@ namespace DoAnATBM
             this.ClientSize = new System.Drawing.Size(884, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
             this.Name = "FromMain";
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FromMain_FormClosing);
-            this.Load += new System.EventHandler(this.FromMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
