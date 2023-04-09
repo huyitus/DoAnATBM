@@ -135,7 +135,7 @@ namespace DoAnATBM
             this.groupBox2.Controls.Add(this.buttonDropRole);
             this.groupBox2.Location = new System.Drawing.Point(298, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 369);
+            this.groupBox2.Size = new System.Drawing.Size(256, 278);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
@@ -225,7 +225,7 @@ namespace DoAnATBM
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 450);
+            this.ClientSize = new System.Drawing.Size(830, 307);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
