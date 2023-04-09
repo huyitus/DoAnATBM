@@ -15,6 +15,7 @@ begin
         RAISE_APPLICATION_ERROR(-20000,'User khong ton tai');
     end if;     
 end;
+/
 --Cap quyen user cho insert va update
 create or replace procedure Grant_Priv_User2(User_Name in varchar2, priv in varchar2,table_name in varchar2, col_name in varchar2, grant_option in varchar2)
 authid current_user
@@ -33,7 +34,7 @@ begin
     end if;     
 end;
 
-
+/
 --Thu hoi quyen user
 create or replace procedure Revoke_Priv_User( User_name in varchar, priv in varchar2, table_name in varchar2)
 authid current_user
@@ -51,7 +52,7 @@ end;
 begin
     Revoke_Priv_User('NV002','select','NHANVIEN');
 end;
-
+/
 --Xem quyen user
 create or replace procedure View_Priv_User( User_name in varchar2,v_cur out sys_refcursor)
 is

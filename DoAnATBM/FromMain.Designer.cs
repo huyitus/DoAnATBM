@@ -31,14 +31,15 @@ namespace DoAnATBM
         {
             this.ButtonUsers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonPrivileges = new System.Windows.Forms.Button();
             this.buttonAlterUser = new System.Windows.Forms.Button();
             this.buttonDropUser = new System.Windows.Forms.Button();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDropRole = new System.Windows.Forms.Button();
+            this.buttonViewRoles = new System.Windows.Forms.Button();
             this.buttonCreateRole = new System.Windows.Forms.Button();
             this.buttonChangePW = new System.Windows.Forms.Button();
-            this.buttonViewRoles = new System.Windows.Forms.Button();
+            this.buttonDropRole = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -52,10 +53,10 @@ namespace DoAnATBM
             this.ButtonUsers.Text = "Xem danh sách";
             this.ButtonUsers.UseVisualStyleBackColor = true;
             this.ButtonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
-
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonPrivileges);
             this.groupBox1.Controls.Add(this.buttonAlterUser);
             this.groupBox1.Controls.Add(this.buttonDropUser);
             this.groupBox1.Controls.Add(this.buttonCreateUser);
@@ -66,6 +67,16 @@ namespace DoAnATBM
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng:";
+            // 
+            // buttonPrivileges
+            // 
+            this.buttonPrivileges.Location = new System.Drawing.Point(20, 190);
+            this.buttonPrivileges.Name = "buttonPrivileges";
+            this.buttonPrivileges.Size = new System.Drawing.Size(220, 30);
+            this.buttonPrivileges.TabIndex = 4;
+            this.buttonPrivileges.Text = "Cấp/thu hồi quyền";
+            this.buttonPrivileges.UseVisualStyleBackColor = true;
+            this.buttonPrivileges.Click += new System.EventHandler(this.buttonPrivileges_Click);
             // 
             // buttonAlterUser
             // 
@@ -110,16 +121,15 @@ namespace DoAnATBM
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Role:";
             // 
-            // buttonDropRole
+            // buttonViewRoles
             // 
-            this.buttonDropRole.Location = new System.Drawing.Point(20, 110);
-            this.buttonDropRole.Name = "buttonDropRole";
-            this.buttonDropRole.Size = new System.Drawing.Size(220, 30);
-            this.buttonDropRole.TabIndex = 5;
-            this.buttonDropRole.Text = "Xóa ";
-            this.buttonDropRole.UseVisualStyleBackColor = true;
-            this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
-
+            this.buttonViewRoles.Location = new System.Drawing.Point(20, 32);
+            this.buttonViewRoles.Name = "buttonViewRoles";
+            this.buttonViewRoles.Size = new System.Drawing.Size(220, 30);
+            this.buttonViewRoles.TabIndex = 7;
+            this.buttonViewRoles.Text = "Xem Danh Sách";
+            this.buttonViewRoles.UseVisualStyleBackColor = true;
+            this.buttonViewRoles.Click += new System.EventHandler(this.buttonViewRoles_Click);
             // 
             // buttonCreateRole
             // 
@@ -141,15 +151,15 @@ namespace DoAnATBM
             this.buttonChangePW.UseVisualStyleBackColor = true;
             this.buttonChangePW.Click += new System.EventHandler(this.buttonChangePW_Click);
             // 
-            // buttonViewRoles
+            // buttonDropRole
             // 
-            this.buttonViewRoles.Location = new System.Drawing.Point(20, 32);
-            this.buttonViewRoles.Name = "buttonViewRoles";
-            this.buttonViewRoles.Size = new System.Drawing.Size(220, 30);
-            this.buttonViewRoles.TabIndex = 7;
-            this.buttonViewRoles.Text = "Xem Danh Sách";
-            this.buttonViewRoles.UseVisualStyleBackColor = true;
-            this.buttonViewRoles.Click += new System.EventHandler(this.buttonViewRoles_Click);
+            this.buttonDropRole.Location = new System.Drawing.Point(20, 110);
+            this.buttonDropRole.Name = "buttonDropRole";
+            this.buttonDropRole.Size = new System.Drawing.Size(220, 30);
+            this.buttonDropRole.TabIndex = 5;
+            this.buttonDropRole.Text = "Xóa ";
+            this.buttonDropRole.UseVisualStyleBackColor = true;
+            this.buttonDropRole.Click += new System.EventHandler(this.buttonDropRole_Click);
             // 
             // FromMain
             // 
@@ -158,10 +168,10 @@ namespace DoAnATBM
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
             this.Name = "FromMain";
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FromMain_FormClosing);
-            this.Load += new System.EventHandler(this.FromMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -180,7 +190,7 @@ namespace DoAnATBM
         private System.Windows.Forms.Button buttonDropRole;
         private System.Windows.Forms.Button buttonViewRoles;
         private System.Windows.Forms.Button buttonChangePW;
-
+        private System.Windows.Forms.Button buttonPrivileges;
     }
 }
 

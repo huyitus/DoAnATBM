@@ -70,9 +70,11 @@ namespace DoAnATBM
 
             form.ShowDialog();
         }
-        private void FromMain_Load(object sender, System.EventArgs e)
-        {
 
+        private void buttonPrivileges_Click(object sender, System.EventArgs e)
+        {
+            FormUserPrivileges form = new FormUserPrivileges();
+            form.Show();
         }
     }
 }

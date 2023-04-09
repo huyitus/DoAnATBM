@@ -42,7 +42,6 @@ namespace DoAnATBM
             this.UsersGridView.RowTemplate.Height = 24;
             this.UsersGridView.Size = new System.Drawing.Size(818, 451);
             this.UsersGridView.TabIndex = 0;
-            this.UsersGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersGridView_CellContentClick);
             // 
             // FormUsers
             // 
@@ -53,7 +52,6 @@ namespace DoAnATBM
             this.Name = "FormUsers";
             this.Text = "Danh sách người dùng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsers_FormClosing);
-            this.Load += new System.EventHandler(this.FormUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsersGridView)).EndInit();
             this.ResumeLayout(false);
 
