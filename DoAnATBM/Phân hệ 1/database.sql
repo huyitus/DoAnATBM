@@ -54,13 +54,6 @@ create table ADMIN.PHANCONG (
     primary key (MANV, MADA)
 );
 
-alter table ADMIN.NHANVIEN add constraint FK_NV_QL foreign key (MANQL) references ADMIN.NHANVIEN(MANV);
-alter table ADMIN.NHANVIEN add constraint FK_NV_PHG foreign key (PHG) references ADMIN.PHONGBAN(MAPB);
-alter table ADMIN.PHONGBAN add constraint FK_NV_TRPHG foreign key (TRPHG) references ADMIN.NHANVIEN(MANV);
-alter table ADMIN.DEAN add constraint FK_DA_PHG foreign key (PHONG) references ADMIN.PHONGBAN(MAPB);
-alter table ADMIN.PHANCONG add constraint FK_PC_DA foreign key (MADA) references ADMIN.DEAN(MADA);
-alter table ADMIN.PHANCONG add constraint FK_PC_NV foreign key (MANV) references ADMIN.NHANVIEN(MANV);
-
 alter session set nls_date_format = 'YYYY-MM-DD';
 
 insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Van An', 'Nam', '1990-05-01', 'Quan 2', '0768897001', '15000000', '1000000', 'Quan ly', null, 'PB001');
@@ -74,7 +67,7 @@ insert into ADMIN.PHONGBAN values('PB004', N'Ky thuat', null);
 insert into ADMIN.PHONGBAN values('PB005', N'Marketing', null);
 insert into ADMIN.PHONGBAN values('PB006', N'Hanh chinh', null);
 
-insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong ?H', '2007-10-20', 'PB001');
+insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', '2007-10-20', 'PB001');
 insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', '2006-10-20', 'PB006');
 insert into ADMIN.DEAN values('DA003', N'Ung dung hoa hoc xanh', '2003-10-10', 'PB001');
 insert into ADMIN.DEAN values('DA004', N'HTTT quan ly giao vien cho mot Khoa', '2000-10-23', 'PB003');
@@ -83,3 +76,10 @@ insert into ADMIN.DEAN values('DA006', N'Nghien cuu che tao soi Nano Platin', '2
 
 insert into ADMIN.PHANCONG values('NV002', 'DA001', 3);
 insert into ADMIN.PHANCONG values('NV003', 'DA006', 3);
+
+alter table ADMIN.NHANVIEN add constraint FK_NV_QL foreign key (MANQL) references ADMIN.NHANVIEN(MANV);
+alter table ADMIN.NHANVIEN add constraint FK_NV_PHG foreign key (PHG) references ADMIN.PHONGBAN(MAPB);
+alter table ADMIN.PHONGBAN add constraint FK_NV_TRPHG foreign key (TRPHG) references ADMIN.NHANVIEN(MANV);
+alter table ADMIN.DEAN add constraint FK_DA_PHG foreign key (PHONG) references ADMIN.PHONGBAN(MAPB);
+alter table ADMIN.PHANCONG add constraint FK_PC_DA foreign key (MADA) references ADMIN.DEAN(MADA);
+alter table ADMIN.PHANCONG add constraint FK_PC_NV foreign key (MANV) references ADMIN.NHANVIEN(MANV);
