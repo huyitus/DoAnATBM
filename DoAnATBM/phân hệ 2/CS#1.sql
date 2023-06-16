@@ -36,7 +36,7 @@ BEGIN
         object_name     => 'NHANVIEN',
         policy_name     => 'NHANVIEN_POLICY',
         function_schema => 'ADMIN',
-        policy_function => 'NHANVIEN_POLICY',
+        policy_function => 'ADMIN.NHANVIEN_POLICY',
         statement_types => 'UPDATE',
         sec_relevant_cols => 'NGAYSINH,DIACHI,SODT'
     );
