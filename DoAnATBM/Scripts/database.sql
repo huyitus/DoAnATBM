@@ -67,6 +67,10 @@ insert into ADMIN.PHONGBAN values('PB004', N'Ky thuat', null);
 insert into ADMIN.PHONGBAN values('PB005', N'Marketing', null);
 insert into ADMIN.PHONGBAN values('PB006', N'Hanh chinh', null);
 
+update ADMIN.PHONGBAN set TRPHG = 'NV004' where MAPB = 'PB001'; 
+insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', '10000000', '1000000', 'Quan ly', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB002');
+
 insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', '2007-10-20', 'PB001');
 insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', '2006-10-20', 'PB006');
 insert into ADMIN.DEAN values('DA003', N'Ung dung hoa hoc xanh', '2003-10-10', 'PB001');
@@ -74,6 +78,7 @@ insert into ADMIN.DEAN values('DA004', N'HTTT quan ly giao vien cho mot Khoa', '
 insert into ADMIN.DEAN values('DA005', N'HTTT quan ly thu vien cac truong DH', '2009-05-10', 'PB001');
 insert into ADMIN.DEAN values('DA006', N'Nghien cuu che tao soi Nano Platin', '2008-05-15', 'PB005');
 
+insert into ADMIN.PHANCONG values('NV001', 'DA002', 3);
 insert into ADMIN.PHANCONG values('NV002', 'DA001', 3);
 insert into ADMIN.PHANCONG values('NV003', 'DA006', 3);
 
@@ -83,3 +88,7 @@ alter table ADMIN.PHONGBAN add constraint FK_NV_TRPHG foreign key (TRPHG) refere
 alter table ADMIN.DEAN add constraint FK_DA_PHG foreign key (PHONG) references ADMIN.PHONGBAN(MAPB);
 alter table ADMIN.PHANCONG add constraint FK_PC_DA foreign key (MADA) references ADMIN.DEAN(MADA);
 alter table ADMIN.PHANCONG add constraint FK_PC_NV foreign key (MANV) references ADMIN.NHANVIEN(MANV);
+
+update ADMIN.PHONGBAN set TRPHG = 'NV004' where MAPB = 'PB001'; 
+insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', '10000000', '1000000', 'Quan ly', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB002');
