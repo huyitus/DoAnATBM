@@ -10,13 +10,59 @@ CREATE OR REPLACE VIEW ADMIN.UV_QUANLY_NHANVIEN AS
     FROM ADMIN.NHANVIEN
     WHERE MANQL = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
-CREATE OR REPLACE VIEW ADMIN.UV_QUANLY_PHANCONG AS
-    SELECT PC.MANV, PC.MADA, PC.THOIGIAN
-    FROM ADMIN.PHANCONG PC, ADMIN.NHANVIEN NV
-    WHERE MANQL = SYS_CONTEXT('USERENV', 'SESSION_USER') AND NV.MANV = PC.MANV;
-/
 GRANT SELECT ON ADMIN.UV_QUANLY_NHANVIEN TO QUANLY_ROLE;
-GRANT SELECT ON ADMIN.UV_QUANLY_PHANCONG TO QUANLY_ROLE;
+
+
+------XEM TREN BANG PHAN CONG
+BEGIN
+    DBMS_RLS.ADD_POLICY(
+        object_schema   => 'ADMIN',
+        object_name     => 'PHANCONG',
+        policy_name     => 'QLPHANCONG',
+        function_schema => 'ADMIN',
+        policy_function => 'QUANLY_PHANCONG',
+        statement_types => 'INSERT,UPDATE,DELETE,SELECT',
+        update_check    => true
+        );
+END;
+/
+BEGIN
+    DBMS_RLS.DROP_POLICY(
+        object_schema   => 'ADMIN',
+        object_name     => 'PHANCONG',
+        policy_name     => 'QLPHANCONG'
+        );
+END;
+/
+
+CREATE OR REPLACE FUNCTION ADMIN.QUANLY_PHANCONG(
+    OBJ_SCHEMA IN VARCHAR2,
+    OBJ_NAME IN VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    USER_ VARCHAR(5);
+    vaitro NVARCHAR2(20);
+BEGIN
+    SELECT VAITRO INTO vaitro
+    FROM NHANVIEN
+    WHERE MANV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    
+    USER_ := SYS_CONTEXT('USERENV', 'SESSION_USER');
+    
+    IF(vaitro = 'Quan ly') THEN 
+        RETURN 'MANV = ''' || USER_ || ''' OR MANV IN (SELECT MANV FROM ADMIN.NHANVIEN WHERE MANQL = ''' || USER_ || ''')';
+    ELSIF(vaitro =  'Truong phong') THEN 
+        RETURN 'MANV = ''' || USER_ || ''' OR MANV IN (SELECT MANV FROM ADMIN.NHANVIEN WHERE PHG IN (SELECT MAPB FROM ADMIN.PHONGBAN WHERE TRPHG = ''' || USER_ || '''))';
+    ELSIF(vaitro =  'Tai chinh') THEN 
+        RETURN '1=1';
+    ELSE 
+        RETURN 'MANV = ''' || USER_ || '''';
+    END IF;
+END;
+
+grant execute on ADMIN.QUANLY_PHANCONG TO QUANLY_ROLE;
+grant select on ADMIN.PHANCONG TO QUANLY_ROLE;
 /
 GRANT QUANLY_ROLE TO NV001;
 
