@@ -43,9 +43,6 @@ BEGIN
 END;
 /   
 
-
-
-
 alter session set "_oracle_script" = true;
 
 drop role NHANVIEN_ROLE;
