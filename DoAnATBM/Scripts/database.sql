@@ -90,5 +90,5 @@ alter table ADMIN.PHANCONG add constraint FK_PC_DA foreign key (MADA) references
 alter table ADMIN.PHANCONG add constraint FK_PC_NV foreign key (MANV) references ADMIN.NHANVIEN(MANV);
 
 update ADMIN.PHONGBAN set TRPHG = 'NV004' where MAPB = 'PB001'; 
-insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', '10000000', '1000000', 'Quan ly', 'NV001', 'PB001');
-insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB002');
+insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', to_date('1991-04-07'), 'Quan 2', '0768897013', '10000000', 1000000, 'Quan ly', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', to_date('1992-03-07'), 'Quan 2', '0768897093', '10000000', 1000000, 'Nhan vien', 'NV001', 'PB002');

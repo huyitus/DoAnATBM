@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using System;
 using Oracle.ManagedDataAccess.Client;
 
 namespace DoAnATBM
@@ -10,9 +11,15 @@ namespace DoAnATBM
         public FromMain()
         {
             InitializeComponent();
-
-            oracleConnection = Global.CreateConnection();
-            oracleConnection.Open();
+            try
+            {
+                oracleConnection = Global.CreateConnection();
+                oracleConnection.Open();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
 
         private void FromMain_FormClosing(object sender, FormClosingEventArgs e)
