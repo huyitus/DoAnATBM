@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NhanVien
 {
-    public partial class FormFeatures : Form
+    public partial class FormFeatures_NV : Form
     {
-        public FormFeatures()
+        public FormFeatures_NV()
         {
             InitializeComponent();
         }
@@ -33,6 +33,26 @@ namespace NhanVien
         {
             FormSuaNhanVien form = new FormSuaNhanVien();
             form.Show();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
