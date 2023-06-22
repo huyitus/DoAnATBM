@@ -54,9 +54,10 @@ create table ADMIN.PHANCONG (
     primary key (MANV, MADA)
 );
 
-alter session set nls_date_format = 'YYYY-MM-DD';
+INSERT INTO ADMIN.NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, MANQL, PHG)
+VALUES ('NV001', 'Nguyen Van A', N'Nam', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'Ha Noi', '0123456789', 5000000, 1000000, 'Nhan vien', null, 'PB001');
 
-insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Van An', 'Nam', '1990-05-01', 'Quan 2', '0768897001', '15000000', '1000000', 'Quan ly', null, 'PB001');
+insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Van An', 'Nam', '1990-05-01', 'Quan 2', '0768897001', 15000000, 1000000, 'Quan ly', null, 'PB001');
 insert into ADMIN.NHANVIEN values('NV002', 'Nguyen Thi Bich', 'Nu', '1990-06-07', 'Quan 3', '0768897002', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB001');
 insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chung', 'Nam', '1990-03-07', 'Quan 2', '0768897003', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB001');
 
@@ -71,12 +72,12 @@ update ADMIN.PHONGBAN set TRPHG = 'NV004' where MAPB = 'PB001';
 insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', '10000000', '1000000', 'Quan ly', 'NV001', 'PB001');
 insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB002');
 
-insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', '2007-10-20', 'PB001');
-insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', '2006-10-20', 'PB006');
-insert into ADMIN.DEAN values('DA003', N'Ung dung hoa hoc xanh', '2003-10-10', 'PB001');
-insert into ADMIN.DEAN values('DA004', N'HTTT quan ly giao vien cho mot Khoa', '2000-10-23', 'PB003');
-insert into ADMIN.DEAN values('DA005', N'HTTT quan ly thu vien cac truong DH', '2009-05-10', 'PB001');
-insert into ADMIN.DEAN values('DA006', N'Nghien cuu che tao soi Nano Platin', '2008-05-15', 'PB005');
+insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', TO_DATE('2007-10-20', 'YYYY-MM-DD'), 'PB001');
+insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', TO_DATE('2006-10-20', 'YYYY-MM-DD'), 'PB006');
+insert into ADMIN.DEAN values('DA003', N'Ung dung hoa hoc xanh', TO_DATE('2003-10-10', 'YYYY-MM-DD'), 'PB001');
+insert into ADMIN.DEAN values('DA004', N'HTTT quan ly giao vien cho mot Khoa', TO_DATE('2000-10-23', 'YYYY-MM-DD'), 'PB003');
+insert into ADMIN.DEAN values('DA005', N'HTTT quan ly thu vien cac truong DH', TO_DATE('2009-05-10', 'YYYY-MM-DD'), 'PB001');
+insert into ADMIN.DEAN values('DA006', N'Nghien cuu che tao soi Nano Platin', TO_DATE('2008-05-15', 'YYYY-MM-DD'), 'PB005');
 
 insert into ADMIN.PHANCONG values('NV001', 'DA002', 3);
 insert into ADMIN.PHANCONG values('NV002', 'DA001', 3);
