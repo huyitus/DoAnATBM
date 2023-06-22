@@ -11,9 +11,6 @@ CREATE OR REPLACE VIEW ADMIN.UV_NHANVIEN_PHANCONG AS
     WHERE MANV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
 
-alter session set "_oracle_script" = true;
-
-=======
 drop role NHANVIEN_ROLE;
 create role NHANVIEN_ROLE;
 
