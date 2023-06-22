@@ -62,6 +62,7 @@
             this.button10.TabIndex = 0;
             this.button10.Text = "ĐỀ ÁN";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button2
             // 
@@ -71,6 +72,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "PHÂN CÔNG";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormFeatures_GD
             // 

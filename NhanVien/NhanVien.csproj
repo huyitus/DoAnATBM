@@ -115,11 +115,29 @@
     <Compile Include="FormFeatures_TDA.Designer.cs">
       <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGD_DA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGD_DA.Designer.cs">
+      <DependentUpon>FormGD_DA.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGD_NV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGD_NV.Designer.cs">
       <DependentUpon>FormGD_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGD_PB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGD_PB.Designer.cs">
+      <DependentUpon>FormGD_PB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGD_PC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGD_PC.Designer.cs">
+      <DependentUpon>FormGD_PC.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -164,8 +182,17 @@
     <EmbeddedResource Include="FormFeatures_TDA.resx">
       <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGD_DA.resx">
+      <DependentUpon>FormGD_DA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGD_NV.resx">
       <DependentUpon>FormGD_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGD_PB.resx">
+      <DependentUpon>FormGD_PB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGD_PC.resx">
+      <DependentUpon>FormGD_PC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

@@ -30,11 +30,25 @@ namespace NhanVien
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form form = new FormGD_PB();    
+            form.Show();
         }
 
         private void FormFeatures_GD_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form form = new FormGD_DA();
+            form.Show();    
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form form = new FormGD_PC();
+            form.Show();
 
         }
     }
