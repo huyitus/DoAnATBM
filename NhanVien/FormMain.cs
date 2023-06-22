@@ -29,7 +29,7 @@ namespace NhanVien
 
                 MessageBox.Show("Dang nhap thanh cong");
 
-                FormFeatures form = new FormFeatures();
+                FormFeatures_NV form = new FormFeatures_NV();
                 form.Show();
             }
             catch (Exception ex)
