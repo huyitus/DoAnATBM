@@ -34,8 +34,46 @@ namespace NhanVien
         private void button1_Click(object sender, EventArgs e)
         {
             string ngaysinh = textBox1.Text;
-            string query = string.Format("update ADMIN.NHANVIEN set NGAYSINH=to_date('@0', 'yyyy-mm-dd') where MANV='@1'",
+            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET NGAYSINH=TO_DATE('{0}', 'YYYY-MM-DD') WHERE MANV='{1}'",
                 ngaysinh, Session.username);
+
+            try
+            {
+                using (OracleCommand command = new OracleCommand(query, oracleConnection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string diachi = textBox2.Text;
+            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET DIACHI='{0}' WHERE MANV='{1}'",
+                diachi, Session.username);
+
+            try
+            {
+                using (OracleCommand command = new OracleCommand(query, oracleConnection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string sodt = textBox3.Text;
+            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET SODT='{0}' WHERE MANV='{1}'",
+                sodt, Session.username);
 
             try
             {

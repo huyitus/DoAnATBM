@@ -106,6 +106,7 @@ namespace NhanVien
             this.button2.TabIndex = 7;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -115,6 +116,7 @@ namespace NhanVien
             this.button3.TabIndex = 8;
             this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FormSuaNhanVien
             // 
