@@ -11,29 +11,6 @@ CREATE OR REPLACE VIEW ADMIN.UV_NHANVIEN_PHANCONG AS
     WHERE MANV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
 
-BEGIN
-  DBMS_RLS.DROP_POLICY(
-    object_schema   => 'ADMIN',
-    object_name     => 'NHANVIEN',
-    policy_name     => 'NHANVIEN_POLICY'
-  );
-END;
-/
-
-DECLARE
-BEGIN
-    DBMS_RLS.ADD_POLICY(
-        object_schema   => 'ADMIN',
-        object_name     => 'NHANVIEN',
-        policy_name     => 'NHANVIEN_POLICY',
-        function_schema => 'ADMIN',
-        policy_function => 'ADMIN.NHANVIEN_POLICY',
-        statement_types => 'UPDATE',
-        sec_relevant_cols => 'NGAYSINH,DIACHI,SODT'
-    );
-END;
-/   
-
 alter session set "_oracle_script" = true;
 
 =======
