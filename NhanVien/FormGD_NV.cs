@@ -1,16 +1,22 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System.Windows.Forms;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace NhanVien
 {
-    public partial class FormXemNhanVien : Form
+    public partial class FormGD_NV : Form
     {
         private readonly OracleConnection oracleConnection;
-
-        public FormXemNhanVien()
+        public FormGD_NV()
         {
+
             InitializeComponent();
 
             try
@@ -24,13 +30,11 @@ namespace NhanVien
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
+            }   
         }
-
         private void Fetch()
         {
-            var queryString = "SELECT * FROM ADMIN.UV_NHANVIEN_NHANVIEN";
-
+            var queryString = "SELECT * FROM ADMIN.NHANVIEN";
             var dataTable = new DataTable();
 
             var dataAdapter = new OracleDataAdapter(queryString, oracleConnection);
@@ -42,10 +46,9 @@ namespace NhanVien
             dataAdapter.Dispose();
         }
 
-        private void FormNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormGD_NV_Load(object sender, EventArgs e)
         {
-            oracleConnection.Close();
-            oracleConnection.Dispose();
+
         }
 
         private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
