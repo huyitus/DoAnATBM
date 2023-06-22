@@ -1,6 +1,6 @@
 ﻿namespace NhanVien
 {
-    partial class FormFeatures_NhanSu
+    partial class FormFeatures_NS
     {
         /// <summary>
         /// Required designer variable.

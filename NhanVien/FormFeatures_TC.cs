@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace NhanVien
 {
-    public partial class FormFeatures_TaiChinh : Form
+    public partial class FormFeatures_TC : Form
     {
-        public FormFeatures_TaiChinh()
+        public FormFeatures_TC()
         {
             InitializeComponent();
+        }
+
+        private void FormFeatures_TC_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

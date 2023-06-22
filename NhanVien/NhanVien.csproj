@@ -146,11 +146,17 @@
     <EmbeddedResource Include="FormFeaturesQLTrucTiep.resx">
       <DependentUpon>FormFeaturesQLTrucTiep.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFeatures_GD.resx">
+      <DependentUpon>FormFeatures_GD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFeatures_NV.resx">
       <DependentUpon>FormFeatures_NV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFeatures_TC.resx">
       <DependentUpon>FormFeatures_TC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFeatures_TDA.resx">
+      <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

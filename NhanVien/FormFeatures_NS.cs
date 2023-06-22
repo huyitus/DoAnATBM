@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NhanVien
 {
-    public partial class FormFeatures_NhanSu : Form
+    public partial class FormFeatures_NS : Form
     {
-        public FormFeatures_NhanSu()
+        public FormFeatures_NS()
         {
             InitializeComponent();
         }
