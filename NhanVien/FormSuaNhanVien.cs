@@ -34,7 +34,9 @@ namespace NhanVien
         private void button1_Click(object sender, EventArgs e)
         {
             string ngaysinh = textBox1.Text;
-            string query = "";
+            string query = string.Format("update ADMIN.NHANVIEN set NGAYSINH=to_date('@0', 'yyyy-mm-dd') where MANV='@1'",
+                ngaysinh, Session.username);
+
             try
             {
                 using (OracleCommand command = new OracleCommand(query, oracleConnection))
