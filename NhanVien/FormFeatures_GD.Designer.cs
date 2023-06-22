@@ -83,6 +83,7 @@
             this.Controls.Add(this.button1);
             this.Name = "FormFeatures_GD";
             this.Text = "GIÁM ĐỐC";
+            this.Load += new System.EventHandler(this.FormFeatures_GD_Load);
             this.ResumeLayout(false);
 
         }

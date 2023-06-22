@@ -115,6 +115,12 @@
     <Compile Include="FormFeatures_TDA.Designer.cs">
       <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGD_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGD_NV.Designer.cs">
+      <DependentUpon>FormGD_NV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFeatures_TDA.resx">
       <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGD_NV.resx">
+      <DependentUpon>FormGD_NV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

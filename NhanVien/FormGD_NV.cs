@@ -11,12 +11,12 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace NhanVien
 {
-    public partial class FormSuaNhanVien : Form
+    public partial class FormGD_NV : Form
     {
         private readonly OracleConnection oracleConnection;
-
-        public FormSuaNhanVien()
+        public FormGD_NV()
         {
+
             InitializeComponent();
 
             try
@@ -24,33 +24,34 @@ namespace NhanVien
                 string connStr = string.Format(Global.CONNECT_STRING, Session.username, Session.password);
                 oracleConnection = new OracleConnection(connStr);
                 oracleConnection.Open();
+
+                Fetch();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
+            }   
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Fetch()
         {
-            string ngaysinh = textBox1.Text;
-            string query = string.Format("update ADMIN.NHANVIEN set NGAYSINH=to_date('@0', 'yyyy-mm-dd') where MANV='@1'",
-                ngaysinh, Session.username);
+            var queryString = "SELECT * FROM ADMIN.NHANVIEN";
+            var dataTable = new DataTable();
 
-            try
-            {
-                using (OracleCommand command = new OracleCommand(query, oracleConnection))
-                {
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            var dataAdapter = new OracleDataAdapter(queryString, oracleConnection);
+            dataAdapter.Fill(dataTable);
+
+            dataGrid.DataSource = dataTable;
+
+            dataTable.Dispose();
+            dataAdapter.Dispose();
         }
 
-        private void FormSuaNhanVien_Load(object sender, EventArgs e)
+        private void FormGD_NV_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
