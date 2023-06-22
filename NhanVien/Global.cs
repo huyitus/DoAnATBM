@@ -4,7 +4,7 @@ namespace NhanVien
 {
     class Global
     {
-        public const string CONNECT_STRING = "Data Source=192.168.60.1:1523/orcl;User Id={0};Password={1};";
+        public const string CONNECT_STRING = "Data Source=localhost:1521/xe;User Id={0};Password={1};";
 
         public static OracleConnection CreateConnection(string connStr)
         {
