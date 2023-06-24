@@ -173,6 +173,9 @@
     <EmbeddedResource Include="FormFeatures_GD.resx">
       <DependentUpon>FormFeatures_GD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFeatures_NS.resx">
+      <DependentUpon>FormFeatures_NS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFeatures_NV.resx">
       <DependentUpon>FormFeatures_NV.cs</DependentUpon>
     </EmbeddedResource>
