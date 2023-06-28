@@ -64,5 +64,12 @@ END;
 grant execute on ADMIN.QUANLY_PHANCONG TO QUANLY_ROLE;
 grant select on ADMIN.PHANCONG TO QUANLY_ROLE;
 /
+
+drop user NV001;
+create user NV001 identified by NV001;
+grant create session to NV001;
 GRANT QUANLY_ROLE TO NV001;
+
+CONN NV001/NV001;
+
 

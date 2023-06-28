@@ -21,9 +21,9 @@ grant SELECT ON ADMIN.PHONGBAN TO NHANVIEN_ROLE;
 grant SELECT ON ADMIN.DEAN TO NHANVIEN_ROLE;
 
 drop user NV002;
-create user NV001 identified by NV002;
+create user NV002 identified by NV002;
 grant create session to NV002;
 grant NHANVIEN_ROLE to NV002;
 
 
-CONN NV001/NV002;
+CONN NV002/NV002;
