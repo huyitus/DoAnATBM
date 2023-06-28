@@ -53,13 +53,16 @@ create table ADMIN.PHANCONG (
     THOIGIAN int,
     primary key (MANV, MADA)
 );
+ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD';
 
-INSERT INTO ADMIN.NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, MANQL, PHG)
-VALUES ('NV001', 'Nguyen Van A', N'Nam', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'Ha Noi', '0123456789', 5000000, 1000000, 'Nhan vien', null, 'PB001');
 
-insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Van An', N'Nam', TO_DATE('1990-05-01', 'YYYY-MM-DD'), 'Quan 2', '0768897001', 15000000, 1000000, 'Quan ly', null, 'PB001');
-insert into ADMIN.NHANVIEN values('NV002', 'Nguyen Thi Bich', 'Nu', TO_DATE('1990-06-07', 'YYYY-MM-DD'), 'Quan 3', '0768897002', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB001');
-insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chung', 'Nam', TO_DATE('1990-03-07', 'YYYY-MM-DD'), 'Quan 2', '0768897003', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Van An', N'Nam', '1990-05-01', 'Quan 2', '0768897001', 15000000, 1000000, 'Quan ly', NULL, 'PB001');
+insert into ADMIN.NHANVIEN values('NV002', 'Nguyen Thi Bich', 'Nu', '1990-06-07', 'Quan 3', '0768897002', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chung', 'Nam', '1990-03-07', 'Quan 2', '0768897003', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', 10000000, 1000000, 'Quan ly', 'NV001', 'PB001');
+insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB002');
+insert into ADMIN.NHANVIEN values('NV008', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Truong phong', NULL, 'PB002');
+insert into ADMIN.NHANVIEN values('NV009', 'Tran Van Hai', 'Nam', TO_DATE('1990-05-18', 'YYYY-MM-DD'), 'Quan 10', '0492295395', 10000000, 1000000, 'Tai chinh', NULL, NULL);
 
 insert into ADMIN.PHONGBAN values('PB001', N'Ke hoach', null);
 insert into ADMIN.PHONGBAN values('PB002', N'Tai chinh', null);
@@ -70,11 +73,6 @@ insert into ADMIN.PHONGBAN values('PB006', N'Hanh chinh', null);
 
 update ADMIN.PHONGBAN set TRPHG = 'NV004' where MAPB = 'PB001'; 
 update ADMIN.PHONGBAN set TRPHG = 'NV008' where MAPB = 'PB002'; 
-
-insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', TO_DATE('1991-04-07', 'YYYY-MM-DD'), 'Quan 2', '0768897013', '10000000', '1000000', 'Quan ly', 'NV001', 'PB001');
-insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', TO_DATE('1992-03-07', 'YYYY-MM-DD'), 'Quan 2', '0768897093', '10000000', '1000000', 'Nhan vien', 'NV001', 'PB002');
-insert into ADMIN.NHANVIEN values('NV008', 'Nguyen Van Chun', 'Nam', TO_DATE('1992-03-07', 'YYYY-MM-DD'), 'Quan 2', '0768897093', '10000000', '1000000', 'Truong phong', NULL, 'PB002');
-insert into ADMIN.NHANVIEN values('NV009', 'Tran Van Hai', 'Nam', TO_DATE('1990-05-18', 'YYYY-MM-DD'), 'Quan 10', '0492295395', '10000000', '1000000', 'Tai chinh', NULL, NULL);
 
 insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', TO_DATE('2007-10-20', 'YYYY-MM-DD'), 'PB001');
 insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', TO_DATE('2006-10-20', 'YYYY-MM-DD'), 'PB006');
@@ -98,3 +96,4 @@ alter table ADMIN.PHANCONG add constraint FK_PC_NV foreign key (MANV) references
 
 Select*from admin.PHONGBAN;
 Select*from admin.NHANVIEN;
+SELECT*FROM ADMIN.PHANCONG;
