@@ -79,6 +79,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCapNhatPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCapNhatPhongBan.Designer.cs">
+      <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemNhanVien.Designer.cs">
+      <DependentUpon>FormThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemPhongBan.Designer.cs">
+      <DependentUpon>FormThemPhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFeaturesQLTrucTiep.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +221,9 @@
     <EmbeddedResource Include="FormSuaNhanVien.resx">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThemNhanVien.resx">
+      <DependentUpon>FormThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormXemNhanVien.resx">
       <DependentUpon>FormXemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +239,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormThemPhongBan.resx">
+      <DependentUpon>FormThemPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>

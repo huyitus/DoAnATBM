@@ -86,6 +86,7 @@ namespace NhanVien
             this.Controls.Add(this.groupBox1);
             this.Name = "FormFeatures_NV";
             this.Text = "Features";
+            this.Load += new System.EventHandler(this.FormFeatures_NV_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

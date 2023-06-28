@@ -134,6 +134,7 @@ namespace NhanVien
             this.Controls.Add(this.label1);
             this.Name = "FormSuaNhanVien";
             this.Text = "FormSuaNhanVien";
+            this.Load += new System.EventHandler(this.FormSuaNhanVien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
