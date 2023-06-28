@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54489622-648B-4FFC-A2AF-49B0BC53F452}</ProjectGuid>
+    <ProjectGuid>{A370FD64-D306-4FC2-961A-F474111416E3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NhanVien</RootNamespace>
-    <AssemblyName>NhanVien</AssemblyName>
+    <RootNamespace>MaHoa</RootNamespace>
+    <AssemblyName>MaHoa</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -79,135 +79,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormFeaturesQLTrucTiep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFeaturesQLTrucTiep.Designer.cs">
-      <DependentUpon>FormFeaturesQLTrucTiep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormFeatures_GD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFeatures_GD.Designer.cs">
-      <DependentUpon>FormFeatures_GD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormFeatures_NS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFeatures_NS.Designer.cs">
-      <DependentUpon>FormFeatures_NS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormFeatures_NV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFeatures_NV.Designer.cs">
-      <DependentUpon>FormFeatures_NV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormFeatures_TC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFeatures_TC.Designer.cs">
-      <DependentUpon>FormFeatures_TC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormFeatures_TDA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFeatures_TDA.Designer.cs">
-      <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGD_DA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGD_DA.Designer.cs">
-      <DependentUpon>FormGD_DA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGD_NV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGD_NV.Designer.cs">
-      <DependentUpon>FormGD_NV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGD_PB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGD_PB.Designer.cs">
-      <DependentUpon>FormGD_PB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGD_PC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGD_PC.Designer.cs">
-      <DependentUpon>FormGD_PC.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSuaNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSuaNhanVien.Designer.cs">
-      <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormXemNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormXemNhanVien.Designer.cs">
-      <DependentUpon>FormXemNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormXemPhanCong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormXemPhanCong.Designer.cs">
-      <DependentUpon>FormXemPhanCong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Session.cs" />
-    <EmbeddedResource Include="FormFeaturesQLTrucTiep.resx">
-      <DependentUpon>FormFeaturesQLTrucTiep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormFeatures_GD.resx">
-      <DependentUpon>FormFeatures_GD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormFeatures_NS.resx">
-      <DependentUpon>FormFeatures_NS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormFeatures_NV.resx">
-      <DependentUpon>FormFeatures_NV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormFeatures_TC.resx">
-      <DependentUpon>FormFeatures_TC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormFeatures_TDA.resx">
-      <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGD_DA.resx">
-      <DependentUpon>FormGD_DA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGD_NV.resx">
-      <DependentUpon>FormGD_NV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGD_PB.resx">
-      <DependentUpon>FormGD_PB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGD_PC.resx">
-      <DependentUpon>FormGD_PC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSuaNhanVien.resx">
-      <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormXemNhanVien.resx">
-      <DependentUpon>FormXemNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormXemPhanCong.resx">
-      <DependentUpon>FormXemPhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
