@@ -1,7 +1,7 @@
 ﻿
 namespace NhanVien
 {
-    partial class FormXemPhanCong
+    partial class FormXemNVCuaPhong
     {
         /// <summary>
         /// Required designer variable.
@@ -36,22 +36,22 @@ namespace NhanVien
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(8, 8);
+            this.dataGrid.Location = new System.Drawing.Point(8, 9);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
             this.dataGrid.Size = new System.Drawing.Size(784, 432);
-            this.dataGrid.TabIndex = 0;
-            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
+            this.dataGrid.TabIndex = 1;
             // 
-            // FormXemPhanCong
+            // FormXemNVCuaPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGrid);
-            this.Name = "FormXemPhanCong";
-            this.Text = "FormXemPhanCong";
+            this.Name = "FormXemNVCuaPhong";
+            this.Text = "FormXemNVCuaPhong";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormXemNVCuaPhong_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 

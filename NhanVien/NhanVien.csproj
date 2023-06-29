@@ -41,7 +41,9 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.21.10.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -79,11 +81,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCapNhatDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCapNhatDeAn.Designer.cs">
+      <DependentUpon>FormCapNhatDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCapNhatLuongPhuCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCapNhatLuongPhuCap.Designer.cs">
+      <DependentUpon>FormCapNhatLuongPhuCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCapNhatPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCapNhatPhongBan.Designer.cs">
       <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemDeAn.Designer.cs">
+      <DependentUpon>FormThemDeAn.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemNhanVien.cs">
       <SubType>Form</SubType>
@@ -175,16 +195,37 @@
     <Compile Include="FormXemNhanVien.Designer.cs">
       <DependentUpon>FormXemNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemNVCuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemNVCuaPhong.Designer.cs">
+      <DependentUpon>FormXemNVCuaPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXemPhanCong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormXemPhanCong.Designer.cs">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXoaDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXoaDeAn.Designer.cs">
+      <DependentUpon>FormXoaDeAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <EmbeddedResource Include="FormCapNhatDeAn.resx">
+      <DependentUpon>FormCapNhatDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCapNhatLuongPhuCap.resx">
+      <DependentUpon>FormCapNhatLuongPhuCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCapNhatPhongBan.resx">
+      <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFeaturesQLTrucTiep.resx">
       <DependentUpon>FormFeaturesQLTrucTiep.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,14 +262,23 @@
     <EmbeddedResource Include="FormSuaNhanVien.resx">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThemDeAn.resx">
+      <DependentUpon>FormThemDeAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemNhanVien.resx">
       <DependentUpon>FormThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemNhanVien.resx">
       <DependentUpon>FormXemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormXemNVCuaPhong.resx">
+      <DependentUpon>FormXemNVCuaPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormXemPhanCong.resx">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXoaDeAn.resx">
+      <DependentUpon>FormXoaDeAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

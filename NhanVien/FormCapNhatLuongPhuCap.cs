@@ -11,11 +11,13 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace NhanVien
 {
-    public partial class FormCapNhatPhongBan : Form
+    
+    public partial class FormCapNhatLuongPhuCap : Form
     {
         private readonly OracleConnection oracleConnection;
-        public FormCapNhatPhongBan()
+        public FormCapNhatLuongPhuCap()
         {
+
             InitializeComponent();
             try
             {
@@ -29,17 +31,27 @@ namespace NhanVien
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormCapNhatLuongPhuCap_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string mapb = textBox1.Text;
-            string tenphong = textBox2.Text;
-            string query = string.Format("UPDATE ADMIN.UV_PHONGBAN_PHONGBAN SET TENPB='{0}' WHERE MAPB='{1}'",
-               tenphong, mapb);
+            string manv = textBox1.Text;
+            string luong = textBox2.Text;
+            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET LUONG='{0}' WHERE MANV='{1}'",
+            luong , manv);
 
             try
             {
@@ -56,10 +68,10 @@ namespace NhanVien
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string mapb = textBox1.Text;
-            string truongphong = textBox3.Text;
-            string query = string.Format("UPDATE ADMIN.UV_PHONGBAN_PHONGBAN SET trphg='{0}' WHERE mabp='{1}'",
-               truongphong, mapb);
+            string manv = textBox1.Text;
+            string phucap = textBox3.Text;
+            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET PHUCAP='{0}' WHERE MANV='{1}'",
+            phucap, manv);
 
             try
             {
@@ -72,10 +84,6 @@ namespace NhanVien
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void FormCapNhatPhongBan_Load(object sender, EventArgs e)
-        {
 
         }
     }

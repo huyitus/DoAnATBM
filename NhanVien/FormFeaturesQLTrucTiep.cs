@@ -19,7 +19,8 @@ namespace NhanVien
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            FormXemNVCuaPhong form = new FormXemNVCuaPhong();   
+            form.Show();  
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,6 +38,12 @@ namespace NhanVien
         private void button3_Click(object sender, EventArgs e)
         {
             FormSuaNhanVien form= new FormSuaNhanVien();   
+            form .Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormXemPhanCong form = new FormXemPhanCong();  
             form .Show();
         }
     }
