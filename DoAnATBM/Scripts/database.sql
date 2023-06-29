@@ -54,18 +54,6 @@ create table ADMIN.PHANCONG (
 );
 ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD';
 
-<<<<<<< HEAD
-
-insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Van An', N'Nam', '1990-05-01', 'Quan 2', '0768897001', 15000000, 1000000, 'Quan ly', NULL, 'PB001');
-insert into ADMIN.NHANVIEN values('NV002', 'Nguyen Thi Bich', 'Nu', '1990-06-07', 'Quan 3', '0768897002', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB001');
-insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chung', 'Nam', '1990-03-07', 'Quan 2', '0768897003', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB001');
-insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', 10000000, 1000000, 'Quan ly', 'NV001', 'PB001');
-insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB002');
-insert into ADMIN.NHANVIEN values('NV006', 'Nguyen Van Ha', 'Nam', '1992-04-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Giam doc', NULL, 'PB004');
-insert into ADMIN.NHANVIEN values('NV008', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Truong phong', NULL, 'PB002');
-insert into ADMIN.NHANVIEN values('NV009', 'Tran Van Hai', 'Nam', TO_DATE('1990-05-18', 'YYYY-MM-DD'), 'Quan 10', '0492295395', 10000000, 1000000, 'Tai chinh', NULL, NULL);
-insert into ADMIN.NHANVIEN values('NV010', 'Nguyen Van Tin', 'Nam', '1999-03-07', 'Quan 3', '0768897093', 10000000, 1000000, 'Nhan su', NULL, 'PB002');
-=======
 insert into ADMIN.NHANVIEN values('QL001', 'Nguyen Van An', N'Nam', '1990-05-01', 'Quan 2', '0768897001', 15000000, 1000000, 'Quan ly', NULL, 'PB001');
 insert into ADMIN.NHANVIEN values('NV001', 'Nguyen Thi Bich', 'Nu', '1990-06-07', 'Quan 3', '0768897002', 10000000, 1000000, 'Nhan vien', 'QL001', 'PB001');
 insert into ADMIN.NHANVIEN values('NV002', 'Nguyen Van Chung', 'Nam', '1990-03-07', 'Quan 2', '0768897003', 10000000, 1000000, 'Nhan vien', 'QL001', 'PB001');
@@ -74,7 +62,7 @@ insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chun', 'Nam', '1992-03-07
 insert into ADMIN.NHANVIEN values('GD001', 'Nguyen Van Ha', 'Nam', '1992-04-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Giam doc', NULL, 'PB004');
 insert into ADMIN.NHANVIEN values('TP001', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Truong phong', NULL, 'PB002');
 insert into ADMIN.NHANVIEN values('TC001', 'Tran Van Hai', 'Nam', TO_DATE('1990-05-18', 'YYYY-MM-DD'), 'Quan 10', '0492295395', 10000000, 1000000, 'Tai chinh', NULL, NULL);
->>>>>>> ccd4118d4e5cfa5d44711313bd1a2d8c1c90df65
+insert into ADMIN.NHANVIEN values('GD002', 'Nguyen Thi Ha', 'Nu', TO_DATE('1992-10-18', 'YYYY-MM-DD'), 'Quan 2', '0768897093', 10000000, 1000000, 'Giam doc', NULL, 'PB002');
 
 
 insert into ADMIN.PHONGBAN values('PB001', N'Ke hoach', null);
