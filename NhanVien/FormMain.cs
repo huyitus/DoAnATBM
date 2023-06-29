@@ -55,7 +55,7 @@ namespace NhanVien
                     FormFeatures_TDA form = new FormFeatures_TDA();
                     form.Show();
                 }
-                else if (work == "QL")
+                else if (work == "QL" || work == "TP")
                 {
                     FormFeaturesQLTrucTiep form = new FormFeaturesQLTrucTiep();
                     form.Show();

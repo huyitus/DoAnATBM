@@ -35,6 +35,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -112,11 +113,22 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(24, 192);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(216, 32);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Xem thông báo";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // FormFeaturesQLTrucTiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 254);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormFeaturesQLTrucTiep";
@@ -136,5 +148,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }

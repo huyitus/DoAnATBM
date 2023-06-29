@@ -143,5 +143,11 @@ namespace DoAnATBM
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormXemAudit form = new FormXemAudit();
+            form.Show();
+        }
     }
 }

@@ -225,6 +225,12 @@
     <Compile Include="FormXemPhanCong.Designer.cs">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemThongBao.Designer.cs">
+      <DependentUpon>FormXemThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXoaDeAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemPhanCong.resx">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemThongBao.resx">
+      <DependentUpon>FormXemThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXoaDeAn.resx">
       <DependentUpon>FormXoaDeAn.cs</DependentUpon>

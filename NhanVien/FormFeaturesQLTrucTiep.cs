@@ -46,5 +46,11 @@ namespace NhanVien
             FormXemPhanCong form = new FormXemPhanCong();  
             form .Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormXemThongBao form = new FormXemThongBao();
+            form.Show();
+        }
     }
 }
