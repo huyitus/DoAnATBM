@@ -61,8 +61,10 @@ insert into ADMIN.NHANVIEN values('NV002', 'Nguyen Thi Bich', 'Nu', '1990-06-07'
 insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chung', 'Nam', '1990-03-07', 'Quan 2', '0768897003', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB001');
 insert into ADMIN.NHANVIEN values('NV004', 'Nguyen Van Chu', 'Nam', '1991-04-07', 'Quan 2', '0768897013', 10000000, 1000000, 'Quan ly', 'NV001', 'PB001');
 insert into ADMIN.NHANVIEN values('NV005', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Nhan vien', 'NV001', 'PB002');
+insert into ADMIN.NHANVIEN values('NV006', 'Nguyen Van Ha', 'Nam', '1992-04-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Giam doc', NULL, 'PB004');
 insert into ADMIN.NHANVIEN values('NV008', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Truong phong', NULL, 'PB002');
 insert into ADMIN.NHANVIEN values('NV009', 'Tran Van Hai', 'Nam', TO_DATE('1990-05-18', 'YYYY-MM-DD'), 'Quan 10', '0492295395', 10000000, 1000000, 'Tai chinh', NULL, NULL);
+
 
 insert into ADMIN.PHONGBAN values('PB001', N'Ke hoach', null);
 insert into ADMIN.PHONGBAN values('PB002', N'Tai chinh', null);
