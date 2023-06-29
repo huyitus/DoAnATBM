@@ -33,10 +33,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +94,16 @@
             this.groupBox2.Text = "Nhân sự";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(16, 150);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(184, 32);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Cập nhật thông tin NV";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(16, 32);
@@ -102,6 +112,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "Thêm Phòng Ban";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -121,15 +132,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Cập nhật phòng ban";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(16, 150);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(184, 32);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Cập nhật thông tin NV";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FormFeatures_NS
             // 

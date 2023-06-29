@@ -20,10 +20,10 @@ grant SELECT ON ADMIN.UV_NHANVIEN_PHANCONG TO NHANVIEN_ROLE;
 grant SELECT ON ADMIN.PHONGBAN TO NHANVIEN_ROLE;
 grant SELECT ON ADMIN.DEAN TO NHANVIEN_ROLE;
 
-drop user NV001;
-create user NV001 identified by NV001;
-grant create session to NV001;
-grant NHANVIEN_ROLE to NV001;
+drop user NV002;
+create user NV002 identified by NV002;
+grant create session to NV002;
+grant NHANVIEN_ROLE to NV002;
 
 
-CONN NV001/NV001;
+CONN NV002/NV002;
