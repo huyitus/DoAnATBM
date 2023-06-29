@@ -105,6 +105,18 @@
     <Compile Include="FormNsSuaNV.Designer.cs">
       <DependentUpon>FormNsSuaNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTaiChinh_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaiChinh_NhanVien.Designer.cs">
+      <DependentUpon>FormTaiChinh_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTaiChinh_PhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaiChinh_PhanCong.Designer.cs">
+      <DependentUpon>FormTaiChinh_PhanCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemDeAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +282,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaNhanVien.resx">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaiChinh_NhanVien.resx">
+      <DependentUpon>FormTaiChinh_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaiChinh_PhanCong.resx">
+      <DependentUpon>FormTaiChinh_PhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemDeAn.resx">
       <DependentUpon>FormThemDeAn.cs</DependentUpon>

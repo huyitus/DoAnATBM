@@ -52,13 +52,13 @@ namespace NhanVien
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormXemNhanVien form = new FormXemNhanVien();
+            FormTaiChinh_NhanVien form = new FormTaiChinh_NhanVien();
             form.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FormXemPhanCong form =new FormXemPhanCong();
+            FormTaiChinh_PhanCong form =new FormTaiChinh_PhanCong();
             form.Show();
         }
 

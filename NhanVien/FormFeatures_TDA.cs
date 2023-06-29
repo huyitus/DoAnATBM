@@ -51,5 +51,11 @@ namespace NhanVien
             FormXemPhanCong form = new FormXemPhanCong();
             form.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormSuaNhanVien form = new FormSuaNhanVien();   
+            form.Show();
+        }
     }
 }
