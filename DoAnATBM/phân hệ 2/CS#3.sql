@@ -55,7 +55,7 @@ END;
 grant execute on ADMIN.QUANLY_PHANCONG TO TRUONGPHONG_ROLE;
 grant update,insert,delete, select on ADMIN.PHANCONG TO TRUONGPHONG_ROLE;
 /
-drop user NV008;
+drop user NV008 cascade;
 create user NV008 identified by NV008;
 grant create session to NV008;
 /
