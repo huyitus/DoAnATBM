@@ -44,7 +44,7 @@ namespace NhanVien
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FormSuaNhanVien form = new FormSuaNhanVien();
+            FormCapNhatLuongPhuCap form = new FormCapNhatLuongPhuCap();
             form.Show();
         }
     }

@@ -40,5 +40,9 @@ BEGIN
 END;
 
 begin
- ADMIN.InsertNV('NV006', 'Nguyen Van Chu', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 'Nhan vien', 'NV001', 'PB002');
+ ADMIN.InsertNV('NV006', 'Nguyen Van Chu', 'Nam', to_date('1992-03-07', 'YYYY-MM-DD'), 'Quan 2', '0768897093', 'Nhan vien', 'QL001', 'PB002');
 end;
+/
+create user NS003 identified by NS003;
+grant create session to NS003;
+grant NHANSU_ROLE to NS003;

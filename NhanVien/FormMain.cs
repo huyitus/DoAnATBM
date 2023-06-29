@@ -50,7 +50,7 @@ namespace NhanVien
                     FormFeatures_TC form = new FormFeatures_TC();
                     form.Show();
                 }
-                else if (work == "TDA")
+                else if (work == "TD")
                 {
                     FormFeatures_TDA form = new FormFeatures_TDA();
                     form.Show();
