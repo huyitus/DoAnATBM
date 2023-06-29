@@ -60,16 +60,14 @@ BEGIN
         RETURN 'MANV = ''' || USER_ || '''';
     END IF;
 END;
-
+/
 grant execute on ADMIN.QUANLY_PHANCONG TO QUANLY_ROLE;
 grant select on ADMIN.PHANCONG TO QUANLY_ROLE;
 /
 
-drop user NV001;
-create user NV001 identified by NV001;
-grant create session to NV001;
-GRANT QUANLY_ROLE TO NV001;
+drop user QL001;
+create user QL001 identified by QL001;
+grant create session to QL001;
+GRANT QUANLY_ROLE TO QL001;
 
-CONN NV001/NV001;
-
-
+conn QL001/QL001;

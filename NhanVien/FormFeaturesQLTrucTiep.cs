@@ -19,7 +19,7 @@ namespace NhanVien
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormXemNhanVien form = new FormXemNhanVien();   
+            FormXemNVCuaPhong form = new FormXemNVCuaPhong();   
             form.Show();  
         }
 
