@@ -195,6 +195,12 @@
     <Compile Include="FormXemNhanVien.Designer.cs">
       <DependentUpon>FormXemNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemNVCuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemNVCuaPhong.Designer.cs">
+      <DependentUpon>FormXemNVCuaPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXemPhanCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemNhanVien.resx">
       <DependentUpon>FormXemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemNVCuaPhong.resx">
+      <DependentUpon>FormXemNVCuaPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemPhanCong.resx">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
