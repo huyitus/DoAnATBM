@@ -54,5 +54,10 @@ namespace NhanVien
         {
 
         }
+
+        private void FormFeatures_NV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

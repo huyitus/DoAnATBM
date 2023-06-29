@@ -87,5 +87,10 @@ namespace NhanVien
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void FormSuaNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
