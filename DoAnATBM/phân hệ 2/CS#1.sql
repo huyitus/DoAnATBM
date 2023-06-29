@@ -1,5 +1,5 @@
 alter session set "_oracle_script" = true;
-/
+
 CREATE OR REPLACE VIEW ADMIN.UV_NHANVIEN_NHANVIEN AS
     SELECT *
     FROM ADMIN.NHANVIEN
@@ -24,6 +24,3 @@ drop user NV002;
 create user NV002 identified by NV002;
 grant create session to NV002;
 grant NHANVIEN_ROLE to NV002;
-
-
-CONN NV002/NV002;
