@@ -59,6 +59,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(192, 22);
             this.textBox3.TabIndex = 8;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -66,6 +67,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 22);
             this.textBox2.TabIndex = 7;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -116,6 +118,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(192, 22);
             this.textBox10.TabIndex = 14;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox11
             // 
@@ -123,6 +126,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(192, 22);
             this.textBox11.TabIndex = 13;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // textBox12
             // 
@@ -130,6 +134,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(192, 22);
             this.textBox12.TabIndex = 12;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // label1
             // 
@@ -241,6 +246,7 @@
             this.button1.TabIndex = 29;
             this.button1.Text = "Them";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormThemNhanVien
             // 
@@ -272,6 +278,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "FormThemNhanVien";
             this.Text = "FormThemNhanVien";
+            this.Load += new System.EventHandler(this.FormThemNhanVien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
