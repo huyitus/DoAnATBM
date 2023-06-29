@@ -11,10 +11,12 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace NhanVien
 {
-    public partial class FormCapNhatPhongBan : Form
+    
+
+    public partial class FormXoaDeAn : Form
     {
         private readonly OracleConnection oracleConnection;
-        public FormCapNhatPhongBan()
+        public FormXoaDeAn()
         {
             InitializeComponent();
             try
@@ -29,18 +31,10 @@ namespace NhanVien
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string mapb = textBox1.Text;
-            string tenphong = textBox2.Text;
-            string query = string.Format("UPDATE ADMIN.UV_PHONGBAN_PHONGBAN SET TENPB='{0}' WHERE MAPB='{1}'",
-               tenphong, mapb);
-
+            string mada = textBox1.Text;
+            string query = string.Format("delete from admin.uv_dean_dean where mada = '", mada,"')");
             try
             {
                 using (OracleCommand command = new OracleCommand(query, oracleConnection))
@@ -52,29 +46,17 @@ namespace NhanVien
             {
                 MessageBox.Show(ex.ToString());
             }
+
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void FormXoaDeAn_Load(object sender, EventArgs e)
         {
-            string mapb = textBox1.Text;
-            string truongphong = textBox3.Text;
-            string query = string.Format("UPDATE ADMIN.UV_PHONGBAN_PHONGBAN SET trphg='{0}' WHERE mabp='{1}'",
-               truongphong, mapb);
+            
 
-            try
-            {
-                using (OracleCommand command = new OracleCommand(query, oracleConnection))
-                {
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
         }
 
-        private void FormCapNhatPhongBan_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

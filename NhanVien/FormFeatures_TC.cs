@@ -52,7 +52,20 @@ namespace NhanVien
 
         private void button4_Click(object sender, EventArgs e)
         {
+            FormXemNhanVien form = new FormXemNhanVien();
+            form.Show();
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormXemPhanCong form =new FormXemPhanCong();
+            form.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormCapNhatLuongPhuCap form = new FormCapNhatLuongPhuCap();
+            form.Show();
         }
     }
 }

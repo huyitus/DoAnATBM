@@ -29,7 +29,20 @@ namespace NhanVien
 
         private void button4_Click(object sender, EventArgs e)
         {
+            FormCapNhatDeAn form = new FormCapNhatDeAn();
+            form.Show();
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormThemDeAn form = new FormThemDeAn(); 
+            form.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormXoaDeAn form = new FormXoaDeAn();
+            form.Show();
         }
     }
 }
