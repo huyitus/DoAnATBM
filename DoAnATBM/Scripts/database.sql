@@ -72,6 +72,8 @@ insert into ADMIN.PHONGBAN values('PB003', N'Nhan su', null);
 insert into ADMIN.PHONGBAN values('PB004', N'Ky thuat', null);
 insert into ADMIN.PHONGBAN values('PB005', N'Marketing', null);
 insert into ADMIN.PHONGBAN values('PB006', N'Hanh chinh', null);
+insert into ADMIN.PHONGBAN values('PB007', N'Ke toan', null);
+insert into ADMIN.PHONGBAN values('PB008', N'Kinh doanh', null);
 
 update ADMIN.PHONGBAN set TRPHG = 'NV004' where MAPB = 'PB001'; 
 update ADMIN.PHONGBAN set TRPHG = 'NV008' where MAPB = 'PB002'; 
