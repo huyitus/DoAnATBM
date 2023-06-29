@@ -11,17 +11,19 @@ using System.Windows.Forms;
 
 namespace NhanVien
 {
-    public partial class FormXemNVCuaPhong : Form
+    public partial class FormXemThongBao : Form
     {
         private readonly OracleConnection oracleConnection;
 
-        public FormXemNVCuaPhong()
+        public FormXemThongBao()
         {
             InitializeComponent();
 
             try
             {
-                string connStr = string.Format(Global.CONNECT_STRING, Session.username, Session.password);
+                string connStrOrg = "Data Source=localhost:1521/xepdb1;User Id={0};Password={1};";
+                string connStr = string.Format(connStrOrg, Session.username, Session.password);
+
                 oracleConnection = new OracleConnection(connStr);
                 oracleConnection.Open();
 
@@ -35,7 +37,7 @@ namespace NhanVien
 
         private void Fetch()
         {
-            var queryString = "SELECT * FROM ADMIN.UV_QUANLY_NHANVIEN";
+            var queryString = "SELECT * FROM ADMIN.THONGBAO";
 
             var dataTable = new DataTable();
 
@@ -48,15 +50,10 @@ namespace NhanVien
             dataAdapter.Dispose();
         }
 
-        private void FormXemNVCuaPhong_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormXemThongBao_FormClosing(object sender, FormClosingEventArgs e)
         {
             oracleConnection.Close();
             oracleConnection.Dispose();
-        }
-
-        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

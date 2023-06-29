@@ -169,6 +169,12 @@
     <Compile Include="FormViewRoles.Designer.cs">
       <DependentUpon>FormViewRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemAudit.Designer.cs">
+      <DependentUpon>FormXemAudit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewRoles.resx">
       <DependentUpon>FormViewRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemAudit.resx">
+      <DependentUpon>FormXemAudit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>

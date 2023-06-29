@@ -50,7 +50,7 @@ namespace NhanVien
         {
             string manv = textBox1.Text;
             string luong = textBox2.Text;
-            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET LUONG='{0}' WHERE MANV='{1}'",
+            string query = string.Format("UPDATE ADMIN.NHANVIEN SET LUONG='{0}' WHERE MANV='{1}'",
             luong , manv);
 
             try
@@ -70,7 +70,7 @@ namespace NhanVien
         {
             string manv = textBox1.Text;
             string phucap = textBox3.Text;
-            string query = string.Format("UPDATE ADMIN.UV_NHANVIEN_NHANVIEN SET PHUCAP='{0}' WHERE MANV='{1}'",
+            string query = string.Format("UPDATE ADMIN.NHANVIEN SET PHUCAP='{0}' WHERE MANV='{1}'",
             phucap, manv);
 
             try

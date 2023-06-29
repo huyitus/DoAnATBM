@@ -62,6 +62,7 @@ insert into ADMIN.NHANVIEN values('NV003', 'Nguyen Van Chun', 'Nam', '1992-03-07
 insert into ADMIN.NHANVIEN values('GD001', 'Nguyen Van Ha', 'Nam', '1992-04-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Giam doc', NULL, 'PB004');
 insert into ADMIN.NHANVIEN values('TP001', 'Nguyen Van Chun', 'Nam', '1992-03-07', 'Quan 2', '0768897093', 10000000, 1000000, 'Truong phong', NULL, 'PB002');
 insert into ADMIN.NHANVIEN values('TC001', 'Tran Van Hai', 'Nam', TO_DATE('1990-05-18', 'YYYY-MM-DD'), 'Quan 10', '0492295395', 10000000, 1000000, 'Tai chinh', NULL, NULL);
+insert into ADMIN.NHANVIEN values('GD002', 'Nguyen Thi Ha', 'Nu', TO_DATE('1992-10-18', 'YYYY-MM-DD'), 'Quan 2', '0768897093', 10000000, 1000000, 'Giam doc', NULL, 'PB002');
 
 
 insert into ADMIN.PHONGBAN values('PB001', N'Ke hoach', null);
@@ -75,7 +76,7 @@ insert into ADMIN.PHONGBAN values('PB008', N'Kinh doanh', null);
 
 update ADMIN.PHONGBAN set TRPHG = 'QL001' where MAPB = 'PB001'; 
 update ADMIN.PHONGBAN set TRPHG = 'TP001' where MAPB = 'PB002'; 
-
+select * from ADMIN.DEAN;
 insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', TO_DATE('2007-10-20', 'YYYY-MM-DD'), 'PB001');
 insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', TO_DATE('2006-10-20', 'YYYY-MM-DD'), 'PB006');
 insert into ADMIN.DEAN values('DA003', N'Ung dung hoa hoc xanh', TO_DATE('2003-10-10', 'YYYY-MM-DD'), 'PB001');

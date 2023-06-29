@@ -33,6 +33,7 @@ namespace NhanVien
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,21 +69,32 @@ namespace NhanVien
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 160);
+            this.groupBox1.Size = new System.Drawing.Size(264, 248);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(16, 152);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(184, 32);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Xem thông báo";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // FormFeatures_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 179);
+            this.ClientSize = new System.Drawing.Size(292, 277);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormFeatures_NV";
             this.Text = "Features";
@@ -98,5 +110,6 @@ namespace NhanVien
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -48,7 +48,7 @@ namespace NhanVien
 
            // string trgpb = textBox3.Text;
             string query = string.Format("INSERT INTO ADMIN.Phongban VALUES('{0}','{1}','{2}')",mapb,tenpb,trpg);
-            Console.WriteLine(query);
+            MessageBox.Show(query);
 
             try
             {
@@ -57,7 +57,7 @@ namespace NhanVien
                     command.ExecuteNonQuery();
 
                 }
-                Console.WriteLine("them thanh cong");
+                MessageBox.Show("ok");
             }
             catch (Exception ex)
             {

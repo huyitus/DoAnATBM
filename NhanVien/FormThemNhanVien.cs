@@ -62,7 +62,7 @@ namespace NhanVien
             string vaitro = textBox10.Text;
             string manql = textBox9.Text;
             string phongban = textBox8.Text;
-            string query = string.Format("AMIN.InsertNV('{0}','{1}',{2},'{3}',{4},{5},{6},{7})");
+            string query = string.Format("ADMIN.InsertNV('{0}','{1}',{2},'{3}',{4},{5},{6},{7})",manv, tennv, phai, ngaysinh,diachi, sodt,luong,phucap,vaitro,manql, phongban );
             try
             {
                 using (OracleCommand command = new OracleCommand(query, oracleConnection))

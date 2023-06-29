@@ -33,19 +33,14 @@ CREATE OR REPLACE FUNCTION ADMIN.QUANLY_PHANCONG(
 RETURN VARCHAR2
 AS
     USER_ VARCHAR(5);
-    vaitro NVARCHAR2(20);
 BEGIN
-    SELECT VAITRO INTO vaitro
-    FROM NHANVIEN
-    WHERE MANV = SYS_CONTEXT('USERENV', 'SESSION_USER');
-    
     USER_ := SYS_CONTEXT('USERENV', 'SESSION_USER');
     
-    IF(vaitro = 'Quan ly') THEN 
+    IF(USER_ LIKE 'QL%') THEN 
         RETURN 'MANV = ''' || USER_ || ''' OR MANV IN (SELECT MANV FROM ADMIN.NHANVIEN WHERE MANQL = ''' || USER_ || ''')';
-    ELSIF(vaitro =  'Truong phong') THEN 
+    ELSIF(USER_ LIKE 'TP%') THEN 
         RETURN 'MANV = ''' || USER_ || ''' OR MANV IN (SELECT MANV FROM ADMIN.NHANVIEN WHERE PHG IN (SELECT MAPB FROM ADMIN.PHONGBAN WHERE TRPHG = ''' || USER_ || '''))';
-    ELSIF(vaitro =  'Tai chinh') THEN 
+    ELSIF(USER_ LIKE 'TC%') THEN 
         RETURN '1=1';
     ELSE 
         RETURN 'MANV = ''' || USER_ || '''';
@@ -55,9 +50,10 @@ END;
 grant execute on ADMIN.QUANLY_PHANCONG TO TRUONGPHONG_ROLE;
 grant update,insert,delete, select on ADMIN.PHANCONG TO TRUONGPHONG_ROLE;
 /
-drop user TP001;
+
+drop user TP001 cascade;
 create user TP001 identified by TP001;
 grant create session to TP001;
-/
+
 GRANT TRUONGPHONG_ROLE TO TP001;
 

@@ -35,7 +35,7 @@ namespace NhanVien
             string tenda = textBox2.Text;
             string ngaybd = textBox3.Text;
             string phong = textBox4.Text;
-            string query = string.Format("INSERT INTO admin.uv_dean_dean (mada, tenda, ngaybd, phong) VALUES ('{0}', '{1}', '{2}', '{3}')",
+            string query = string.Format("INSERT INTO admin.dean VALUES ('{0}', '{1}', '{2}', '{3}')",
                              mada, tenda, ngaybd, phong);
             try
             {

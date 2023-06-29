@@ -9,20 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NhanVien
+namespace DoAnATBM
 {
-    public partial class FormXemNVCuaPhong : Form
+    public partial class FormXemAudit : Form
     {
         private readonly OracleConnection oracleConnection;
 
-        public FormXemNVCuaPhong()
+        public FormXemAudit()
         {
             InitializeComponent();
 
             try
             {
-                string connStr = string.Format(Global.CONNECT_STRING, Session.username, Session.password);
-                oracleConnection = new OracleConnection(connStr);
+                oracleConnection = Global.CreateConnection();
                 oracleConnection.Open();
 
                 Fetch();
@@ -35,7 +34,7 @@ namespace NhanVien
 
         private void Fetch()
         {
-            var queryString = "SELECT * FROM ADMIN.UV_QUANLY_NHANVIEN";
+            var queryString = "SELECT DBUSERNAME ,ACTION_NAME, OBJECT_SCHEMA, OBJECT_NAME, EVENT_TIMESTAMP, SQL_TEXT FROM unified_audit_trail WHERE object_name = 'PHANCONG'";
 
             var dataTable = new DataTable();
 
@@ -48,15 +47,10 @@ namespace NhanVien
             dataAdapter.Dispose();
         }
 
-        private void FormXemNVCuaPhong_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormXemAudit_FormClosing(object sender, FormClosingEventArgs e)
         {
             oracleConnection.Close();
             oracleConnection.Dispose();
-        }
-
-        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -6,15 +6,16 @@ EXEC LBACSYS.OLS_ENFORCEMENT.ENABLE_OLS;
 
 CONN lbacsys/lbacsys
 BEGIN
+    SA_SYSDBA.DROP_POLICY(
+        policy_name => 'THONGBAO_OLS'
+        );
+END;
+
+CONN lbacsys/lbacsys
+BEGIN
     SA_SYSDBA.CREATE_POLICY(
         policy_name => 'THONGBAO_OLS',
         column_name => 'COL_OLS'
-        );
-END;
-CONN lbacsys/lbacsys
-BEGIN
-    SA_SYSDBA.DROP_POLICY(
-        policy_name => 'THONGBAO_OLS'
         );
 END;
 
@@ -41,6 +42,7 @@ BEGIN
         long_name    => 'Nhan vien'  
     );
 END;
+
 CONN lbacsys/lbacsys
 BEGIN
     SA_COMPONENTS.CREATE_COMPARTMENT(
@@ -89,10 +91,11 @@ BEGIN
     );
 END;
 
+CONN lbacsys/lbacsys
 EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>3330, label_value =>'GD:MAB,SX,GC:MB,MT,MN');
 EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>2100, label_value =>'TP:SX:MN');
 EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>3310, label_value =>'GD:MAB,SX,GC:MB');
-EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>1310, label_value =>'NV:MAB,SX,GC:MN');
+EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>1300, label_value =>'NV:MAB,SX,GC:MT');
 
 
 drop user admin cascade;
@@ -100,6 +103,7 @@ create user ADMIN identified by admin123;
 grant create session to ADMIN;
 grant all privileges to ADMIN;
 
+conn ADMIN/admin123;
 DROP TABLE THONGBAO;
 
 conn ADMIN/admin123;
@@ -151,8 +155,8 @@ set COL_OLS = char_to_label('THONGBAO_OLS','GD:MAB,SX,GC:MB')
 WHERE CAPBAC='Giam Doc' AND CHINHANH='mien Bac';
 
 update ADMIN.THONGBAO
-set COL_OLS = char_to_label('THONGBAO_OLS','NV:MAB,SX,GC:MN')
-WHERE CAPBAC='Nhan Vien' AND CHINHANH='mien Nam';
+set COL_OLS = char_to_label('THONGBAO_OLS','NV:MAB,SX,GC:MT')
+WHERE CAPBAC='Nhan Vien' AND CHINHANH='mien Trung';
 
 conn ADMIN/admin123;
 --XOA AP DUNG POLICY
@@ -166,7 +170,6 @@ END;
 
 --AP DUNG POLICY OLS
 conn ADMIN/admin123;
-
 BEGIN
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name     =>'THONGBAO_OLS',
@@ -178,34 +181,34 @@ END;
 
 alter session set "_ORACLE_SCRIPT"=true;
 
+drop user GD001 cascade;
+drop user TP001 cascade;
+drop user GD002 cascade;
 drop user NV001 cascade;
-drop user NV002 cascade;
-drop user NV006 cascade;
-drop user NV008 cascade;
+
+create user GD001 identified by GD001;
+grant create session to GD001;
+
+create user TP001 identified by TP001;
+grant create session to TP001;
+
+create user GD002 identified by GD002;
+grant create session to GD002;
 
 create user NV001 identified by NV001;
 grant create session to NV001;
 
-create user NV002 identified by NV002;
-grant create session to NV002;
-
-create user NV006 identified by NV006;
-grant create session to NV006;
-
-create user NV008 identified by NV008;
-grant create session to NV008;
-
 conn ADMIN/admin123;
+grant select on THONGBAO to GD001;
+grant select on THONGBAO to TP001;
+grant select on THONGBAO to GD002;
 grant select on THONGBAO to NV001;
-grant select on THONGBAO to NV002;
-grant select on THONGBAO to NV006;
-grant select on THONGBAO to NV008;
 
 conn ADMIN/admin123;
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
-        user_name       =>'NV006',
+        user_name       =>'GD002',
         max_read_label  =>'GD:MAB,SX,GC:MB,MT,MN',
         def_label       =>'GD:MAB,SX,GC:MB,MT,MN',
         row_label       =>'GD:MAB,SX,GC:MB,MT,MN'
@@ -216,7 +219,7 @@ conn ADMIN/admin123;
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
-        user_name       =>'NV008',
+        user_name       =>'NV001',
         max_read_label   =>'TP:SX:MN',
         def_label       =>'TP:SX:MN',
         row_label       =>'TP:SX:MN'
@@ -227,7 +230,7 @@ conn ADMIN/admin123;
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
-        user_name       =>'NV001',
+        user_name       =>'GD001',
         max_read_label   =>'GD:MAB,SX,GC:MB',
         def_label       =>'GD:MAB,SX,GC:MB',
         row_label       =>'GD:MAB,SX,GC:MB'
@@ -238,22 +241,23 @@ conn ADMIN/admin123;
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
-        user_name       =>'NV002',
-        max_read_label   =>'NV:MAB,SX,GC:MN',
-        def_label       =>'NV:MAB,SX,GC:MN',
-        row_label       =>'NV:MAB,SX,GC:MN'
+        user_name       =>'TP001',
+        max_read_label   =>'NV:MAB,SX,GC:MT',
+        def_label       =>'NV:MAB,SX,GC:MT',
+        row_label       =>'NV:MAB,SX,GC:MT'
     );
 END;
 
+
+CONN GD001/GD001
+SELECT*FROM ADMIN.THONGBAO;
+
+CONN TP001/TP001
+SELECT*FROM ADMIN.THONGBAO;
+
+CONN GD002/GD002
+SELECT*FROM ADMIN.THONGBAO;
+
 CONN NV001/NV001
-SELECT*FROM ADMIN.THONGBAO;
-
-CONN NV002/NV002
-SELECT*FROM ADMIN.THONGBAO;
-
-CONN NV006/NV006
-SELECT*FROM ADMIN.THONGBAO;
-
-CONN NV008/NV008
 SELECT*FROM ADMIN.THONGBAO;
 

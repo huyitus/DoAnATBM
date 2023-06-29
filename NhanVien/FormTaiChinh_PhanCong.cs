@@ -1,5 +1,4 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace NhanVien
 {
-    public partial class FormXemNVCuaPhong : Form
+    public partial class FormTaiChinh_PhanCong : Form
     {
         private readonly OracleConnection oracleConnection;
-
-        public FormXemNVCuaPhong()
+        public FormTaiChinh_PhanCong()
         {
             InitializeComponent();
-
             try
             {
                 string connStr = string.Format(Global.CONNECT_STRING, Session.username, Session.password);
@@ -32,11 +30,9 @@ namespace NhanVien
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void Fetch()
         {
-            var queryString = "SELECT * FROM ADMIN.UV_QUANLY_NHANVIEN";
-
+            var queryString = "SELECT * FROM ADMIN.Phancong";
             var dataTable = new DataTable();
 
             var dataAdapter = new OracleDataAdapter(queryString, oracleConnection);
@@ -48,13 +44,7 @@ namespace NhanVien
             dataAdapter.Dispose();
         }
 
-        private void FormXemNVCuaPhong_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            oracleConnection.Close();
-            oracleConnection.Dispose();
-        }
-
-        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGird_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
