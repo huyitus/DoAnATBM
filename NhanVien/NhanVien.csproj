@@ -99,6 +99,12 @@
     <Compile Include="FormCapNhatPhongBan.Designer.cs">
       <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNsSuaNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNsSuaNV.Designer.cs">
+      <DependentUpon>FormNsSuaNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemDeAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNsSuaNV.resx">
+      <DependentUpon>FormNsSuaNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaNhanVien.resx">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>

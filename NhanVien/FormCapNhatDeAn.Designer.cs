@@ -109,6 +109,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox4
             // 
@@ -134,6 +135,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FormCapNhatDeAn
             // 
@@ -153,6 +155,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "FormCapNhatDeAn";
             this.Text = "FormCapNhatDeAn";
+            this.Load += new System.EventHandler(this.FormCapNhatDeAn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
