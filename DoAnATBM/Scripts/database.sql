@@ -87,8 +87,8 @@ insert into ADMIN.DEAN values('DA006', N'Nghien cuu che tao soi Nano Platin', TO
 insert into ADMIN.PHANCONG values('QL001', 'DA002', 3);
 insert into ADMIN.PHANCONG values('NV002', 'DA001', 3);
 insert into ADMIN.PHANCONG values('NV003', 'DA006', 3);
-insert into ADMIN.PHANCONG values('NV005', 'DA006', 3);
-insert into ADMIN.PHANCONG values('TP008', 'DA006', 3);
+insert into ADMIN.PHANCONG values('NV001', 'DA006', 3);
+insert into ADMIN.PHANCONG values('TP001', 'DA006', 3);
 
 alter table ADMIN.NHANVIEN add constraint FK_NV_QL foreign key (MANQL) references ADMIN.NHANVIEN(MANV);
 alter table ADMIN.NHANVIEN add constraint FK_NV_PHG foreign key (PHG) references ADMIN.PHONGBAN(MAPB);
