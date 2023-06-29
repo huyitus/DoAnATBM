@@ -21,7 +21,9 @@ namespace NhanVien
 
             try
             {
-                string connStr = string.Format(Global.CONNECT_STRING, Session.username, Session.password);
+                string connStrOrg = "Data Source=localhost:1521/xepdb1;User Id={0};Password={1};";
+                string connStr = string.Format(connStrOrg, Session.username, Session.password);
+
                 oracleConnection = new OracleConnection(connStr);
                 oracleConnection.Open();
 
