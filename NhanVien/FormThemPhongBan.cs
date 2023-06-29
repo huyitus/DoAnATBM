@@ -44,16 +44,20 @@ namespace NhanVien
         private void button3_Click(object sender, EventArgs e)
         {   string mapb = textBox1.Text;
             string tenpb = textBox2.Text;
+            string trpg = textBox3.Text;
 
-            string trgpb = textBox3.Text;
-            string query = string.Format("INSERT INTO ADMIN.UV_PHONGBAN_PHONGBAN VALUES( MABP='", mapb, "',TENPB = '", tenpb, "',TRPHG = '",trgpb,"')");
+           // string trgpb = textBox3.Text;
+            string query = string.Format("INSERT INTO ADMIN.Phongban VALUES('{0}','{1}','{2}')",mapb,tenpb,trpg);
+            Console.WriteLine(query);
 
             try
             {
                 using (OracleCommand command = new OracleCommand(query, oracleConnection))
                 {
                     command.ExecuteNonQuery();
+
                 }
+                Console.WriteLine("them thanh cong");
             }
             catch (Exception ex)
             {
@@ -63,6 +67,16 @@ namespace NhanVien
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
