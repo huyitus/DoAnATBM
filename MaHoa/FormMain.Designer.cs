@@ -47,7 +47,7 @@ namespace MaHoa
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 168);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên bảng:";
             // 
@@ -56,7 +56,7 @@ namespace MaHoa
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên cột:";
             // 
@@ -99,7 +99,7 @@ namespace MaHoa
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 17);
+            this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Mật khẩu ví:";
             // 
@@ -126,7 +126,7 @@ namespace MaHoa
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(104, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 17);
+            this.label4.Size = new System.Drawing.Size(197, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "(chỉ cần kích hoạt 1 lần duy nhất)";
             // 
@@ -160,6 +160,7 @@ namespace MaHoa
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mã hóa bảng";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

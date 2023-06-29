@@ -55,5 +55,10 @@ namespace NhanVien
             oracleConnection.Close();
             oracleConnection.Dispose();
         }
+
+        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

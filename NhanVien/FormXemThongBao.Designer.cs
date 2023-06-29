@@ -42,6 +42,7 @@ namespace NhanVien
             this.dataGrid.RowTemplate.Height = 24;
             this.dataGrid.Size = new System.Drawing.Size(784, 432);
             this.dataGrid.TabIndex = 1;
+            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
             // FormXemThongBao
             // 
