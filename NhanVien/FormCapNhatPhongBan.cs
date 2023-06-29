@@ -38,7 +38,7 @@ namespace NhanVien
         {
             string mapb = textBox1.Text;
             string tenphong = textBox2.Text;
-            string query = string.Format("UPDATE ADMIN.UV_PHONGBAN_PHONGBAN SET TENPB='{0}' WHERE MAPB='{1}'",
+            string query = string.Format("UPDATE ADMIN.PHONGBAN SET TENPB='{0}' WHERE MAPB='{1}'",
                tenphong, mapb);
 
             try
@@ -58,7 +58,7 @@ namespace NhanVien
         {
             string mapb = textBox1.Text;
             string truongphong = textBox3.Text;
-            string query = string.Format("UPDATE ADMIN.UV_PHONGBAN_PHONGBAN SET trphg='{0}' WHERE mabp='{1}'",
+            string query = string.Format("UPDATE ADMIN.PHONGBAN SET trphg='{0}' WHERE MAPB='{1}'",
                truongphong, mapb);
 
             try

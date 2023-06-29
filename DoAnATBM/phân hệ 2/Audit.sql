@@ -14,6 +14,7 @@ BEGIN
   enable => TRUE, 
   statement_types => 'UPDATE');
 END;
+
 --Disable va drop audit
 exec DBMS_FGA.DISABLE_POLICY('ADMIN', 'PHANCONG', 'FGA_PHANCONG_THOIGIAN');
 exec DBMS_FGA.DROP_POLICY('ADMIN', 'PHANCONG', 'FGA_PHANCONG_THOIGIAN');
@@ -38,12 +39,13 @@ END;
 exec DBMS_FGA.DISABLE_POLICY('ADMIN', 'NHANVIEN', 'FGA_SELECT_LUONG_PHUCAP');
 exec DBMS_FGA.DROP_POLICY('ADMIN', 'NHANVIEN', 'FGA_SELECT_LUONG_PHUCAP');
 /
+
 --Thuc thi audit
 SELECT DBUSERNAME ,ACTION_NAME, OBJECT_SCHEMA, OBJECT_NAME, EVENT_TIMESTAMP, SQL_TEXT
 FROM unified_audit_trail
 WHERE object_name = 'NHANVIEN';
 /
---Luu vet mot nguoi khong thuoc vai tro 'Tai chinh' nhung da cap nhat thanh cong tren truong LUONG và PHUCAP
+--Luu vet mot nguoi khong thuoc vai tro 'Tai chinh' nhung da cap nhat thanh cong tren truong LUONG vï¿½ PHUCAP
 BEGIN
   DBMS_FGA.ADD_POLICY(
   object_schema => 'ADMIN',
