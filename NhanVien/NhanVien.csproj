@@ -81,11 +81,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCapNhatDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCapNhatDeAn.Designer.cs">
+      <DependentUpon>FormCapNhatDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCapNhatLuongPhuCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCapNhatLuongPhuCap.Designer.cs">
+      <DependentUpon>FormCapNhatLuongPhuCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCapNhatPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCapNhatPhongBan.Designer.cs">
       <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemDeAn.Designer.cs">
+      <DependentUpon>FormThemDeAn.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemNhanVien.cs">
       <SubType>Form</SubType>
@@ -183,10 +201,25 @@
     <Compile Include="FormXemPhanCong.Designer.cs">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXoaDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXoaDeAn.Designer.cs">
+      <DependentUpon>FormXoaDeAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <EmbeddedResource Include="FormCapNhatDeAn.resx">
+      <DependentUpon>FormCapNhatDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCapNhatLuongPhuCap.resx">
+      <DependentUpon>FormCapNhatLuongPhuCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCapNhatPhongBan.resx">
+      <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFeaturesQLTrucTiep.resx">
       <DependentUpon>FormFeaturesQLTrucTiep.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +256,9 @@
     <EmbeddedResource Include="FormSuaNhanVien.resx">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThemDeAn.resx">
+      <DependentUpon>FormThemDeAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemNhanVien.resx">
       <DependentUpon>FormThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemPhanCong.resx">
       <DependentUpon>FormXemPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXoaDeAn.resx">
+      <DependentUpon>FormXoaDeAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
