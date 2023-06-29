@@ -59,5 +59,11 @@ drop user NV008;
 create user NV008 identified by NV008;
 grant create session to NV008;
 /
-GRANT TRUONGPHONG_ROLE TO NV008;
+drop user TP001;
+create user TP001 identified by TP001;
+grant create session to TP001;
+
+GRANT TRUONGPHONG_ROLE TO TP001;
+
+
 

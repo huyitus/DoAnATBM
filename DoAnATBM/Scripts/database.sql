@@ -75,7 +75,7 @@ insert into ADMIN.PHONGBAN values('PB008', N'Kinh doanh', null);
 
 update ADMIN.PHONGBAN set TRPHG = 'QL001' where MAPB = 'PB001'; 
 update ADMIN.PHONGBAN set TRPHG = 'TP001' where MAPB = 'PB002'; 
-
+select * from ADMIN.DEAN;
 insert into ADMIN.DEAN values('DA001', N'HTTT quan ly cac truong DH', TO_DATE('2007-10-20', 'YYYY-MM-DD'), 'PB001');
 insert into ADMIN.DEAN values('DA002', N'Nghien cuu te bao goc', TO_DATE('2006-10-20', 'YYYY-MM-DD'), 'PB006');
 insert into ADMIN.DEAN values('DA003', N'Ung dung hoa hoc xanh', TO_DATE('2003-10-10', 'YYYY-MM-DD'), 'PB001');
