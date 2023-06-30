@@ -62,7 +62,7 @@ namespace NhanVien
                 }
                 else if (work == "TP")
                 {
-                    FormFeaturesQLTrucTiep form = new FormFeaturesQLTrucTiep();
+                    FormFeatures_TruongPhong form = new FormFeatures_TruongPhong();
                     form.Show();
                 }
             }
@@ -70,6 +70,11 @@ namespace NhanVien
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

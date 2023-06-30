@@ -1,6 +1,6 @@
 ﻿namespace NhanVien
 {
-    partial class XemPhanCongCuaPhong
+    partial class FormXemPhanCongCuaPhong
     {
         /// <summary>
         /// Required designer variable.

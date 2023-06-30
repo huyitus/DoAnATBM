@@ -11,10 +11,10 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace NhanVien
 {
-    public partial class XemPhanCongCuaPhong : Form
+    public partial class FormXemPhanCongCuaPhong : Form
     {
         private readonly OracleConnection oracleConnection;
-        public XemPhanCongCuaPhong()
+        public FormXemPhanCongCuaPhong()
         {
             InitializeComponent();
             try
