@@ -40,14 +40,14 @@ namespace NhanVien
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(784, 432);
+            this.dataGrid.Size = new System.Drawing.Size(1002, 432);
             this.dataGrid.TabIndex = 1;
             // 
             // FormXemThongBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1011, 450);
             this.Controls.Add(this.dataGrid);
             this.Name = "FormXemThongBao";
             this.Text = "FormXemThongBao";

@@ -1,3 +1,5 @@
+SELECT VALUE FROM V$OPTION WHERE PARAMETER='Unified Auditing';
+
 alter session set "_ORACLE_SCRIPT" = true;
 /
 --Cap quyen audit cho admin
@@ -30,9 +32,11 @@ BEGIN
   object_schema => 'ADMIN',
   object_name => 'NHANVIEN',
   policy_name => 'FGA_SELECT_LUONG_PHUCAP', 
+  audit_condition =>'MANV != SYS_CONTEXT(''USERENV'', ''SESSION_USER'')',
   audit_column => 'LUONG, PHUCAP',
   enable => TRUE,
-  statement_types => 'SELECT');
+  statement_types => 'SELECT',
+  AUDIT_COLUMN_OPTS => DBMS_FGA.ALL_COLUMNS);
 END;
 /
 --Disable va drop audit

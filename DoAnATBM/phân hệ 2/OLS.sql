@@ -25,21 +25,21 @@ BEGIN
         policy_name  => 'THONGBAO_OLS',
         level_num    => 1000,
         short_name   => 'GD',
-        long_name    => 'Giam doc'
+        long_name    => 'Giam Doc'
     );
     
     SA_COMPONENTS.CREATE_LEVEL(
         policy_name  => 'THONGBAO_OLS',
         level_num    => 100,
         short_name   => 'TP',
-        long_name    => 'Truong phong'
+        long_name    => 'Truong Phong'
     );
     
     SA_COMPONENTS.CREATE_LEVEL(
         policy_name  => 'THONGBAO_OLS',
         level_num    => 10,
         short_name   => 'NV',
-        long_name    => 'Nhan vien'  
+        long_name    => 'Nhan Vien'  
     );
 END;
 
@@ -94,7 +94,7 @@ END;
 CONN lbacsys/lbacsys
 EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>3330, label_value =>'GD:MAB,SX,GC:MB,MT,MN');
 EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>2100, label_value =>'TP:SX:MN');
-EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>3310, label_value =>'GD:MAB,SX,GC:MB');
+EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>3010, label_value =>'GD:MAB,SX,GC:MB');
 EXECUTE SA_LABEL_ADMIN.CREATE_LABEL(policy_name =>'THONGBAO_OLS', label_tag =>1300, label_value =>'NV:MAB,SX,GC:MT');
 
 
@@ -139,9 +139,10 @@ GRANT EXECUTE ON to_lbac_data_label TO ADMIN;
 
 GRANT THONGBAO_OLS_DBA TO ADMIN;
 
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 EXECUTE SA_POLICY_ADMIN.APPLY_TABLE_POLICY(policy_name =>'THONGBAO_OLS', schema_name =>'admin', table_name =>'THONGBAO', table_options =>'NO_CONTROL');
 
+conn ADMIN/admin123;
 update ADMIN.THONGBAO
 set COL_OLS = char_to_label('THONGBAO_OLS','GD:MAB,SX,GC:MB,MT,MN')
 WHERE CAPBAC='Giam Doc';
@@ -158,7 +159,7 @@ update ADMIN.THONGBAO
 set COL_OLS = char_to_label('THONGBAO_OLS','NV:MAB,SX,GC:MT')
 WHERE CAPBAC='Nhan Vien' AND CHINHANH='mien Trung';
 
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 --XOA AP DUNG POLICY
 BEGIN
     SA_POLICY_ADMIN.REMOVE_TABLE_POLICY(
@@ -169,7 +170,7 @@ BEGIN
 END;
 
 --AP DUNG POLICY OLS
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 BEGIN
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name     =>'THONGBAO_OLS',
@@ -204,44 +205,44 @@ grant select on THONGBAO to TP001;
 grant select on THONGBAO to GD002;
 grant select on THONGBAO to NV001;
 
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
         user_name       =>'GD002',
         max_read_label  =>'GD:MAB,SX,GC:MB,MT,MN',
         def_label       =>'GD:MAB,SX,GC:MB,MT,MN',
-        row_label       =>'GD:MAB,SX,GC:MB,MT,MN'
+        row_label       =>'NV'
     );
 END; 
 
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
-        user_name       =>'NV001',
+        user_name       =>'TP001',
         max_read_label   =>'TP:SX:MN',
         def_label       =>'TP:SX:MN',
-        row_label       =>'TP:SX:MN'
+        row_label       =>'NV:SX:MN'
     );
 END;
 
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
         user_name       =>'GD001',
         max_read_label   =>'GD:MAB,SX,GC:MB',
         def_label       =>'GD:MAB,SX,GC:MB',
-        row_label       =>'GD:MAB,SX,GC:MB'
+        row_label       =>'NV:MAB,SX,GC:MB'
     );
 END;
 
-conn ADMIN/admin123;
+CONN lbacsys/lbacsys
 BEGIN
     SA_USER_ADMIN.SET_USER_LABELS(
         policy_name     =>'THONGBAO_OLS',
-        user_name       =>'TP001',
+        user_name       =>'NV001',
         max_read_label   =>'NV:MAB,SX,GC:MT',
         def_label       =>'NV:MAB,SX,GC:MT',
         row_label       =>'NV:MAB,SX,GC:MT'

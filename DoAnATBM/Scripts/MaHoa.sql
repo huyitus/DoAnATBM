@@ -1,5 +1,7 @@
+alter session set container=CDB$ROOT;
+
 -- Create a wallet, you must create a wallet folder before
-ADMINISTER KEY MANAGEMENT CREATE KEYSTORE 'C:\app\Huy\admin\orcl\wallet' IDENTIFIED BY "atbm1234";
+ADMINISTER KEY MANAGEMENT CREATE KEYSTORE 'C:\app\User\product\21c\admin\XE\wallet' IDENTIFIED BY "atbm1234";
 
 -- Open the wallet
 ADMINISTER KEY MANAGEMENT SET KEYSTORE OPEN IDENTIFIED BY "atbm1234" CONTAINER=ALL;
@@ -24,12 +26,8 @@ BEGIN
     EXECUTE IMMEDIATE 'ADMINISTER KEY MANAGEMENT SET KEYSTORE OPEN IDENTIFIED BY "' || p_password || '" CONTAINER=ALL';
 END;
 /
+alter session set container=xepdb1;
 
-execute MaHoaCot('admin.nhanvien', 'luong');
-/
-execute GiaiMaCot('admin.nhanvien', 'luong');
-/
-execute 
-
+--exec KichHoatVi('atbm1234');
 -- Close the wallet
 -- ADMINISTER KEY MANAGEMENT SET KEYSTORE CLOSE IDENTIFIED BY "atbm1234" CONTAINER=ALL;

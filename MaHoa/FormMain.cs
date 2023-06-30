@@ -7,7 +7,7 @@ namespace MaHoa
 {
     public partial class FormMain : Form
     {
-        const string CONNECT_STRING = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl)));DBA Privilege=SYSDBA;User Id=sys;Password=123456;";
+        const string CONNECT_STRING = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xepdb1)));DBA Privilege=SYSDBA;User Id=sys;Password=123456789;";
 
         public FormMain()
         {
@@ -16,6 +16,7 @@ namespace MaHoa
 
         private void btnActivateWallet_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 OracleConnection connection = new OracleConnection(CONNECT_STRING);
@@ -35,12 +36,29 @@ namespace MaHoa
             {
                 MessageBox.Show(err.ToString());
             }
+            */
+            string query = "ADMINISTER KEY MANAGEMENT SET KEYSTORE OPEN IDENTIFIED BY " + txtPassword.Text + " CONTAINER=ALL";
+            try
+            {
+                OracleConnection connection = new OracleConnection(CONNECT_STRING);
+                connection.Open();
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
             try
             {
+
+                
                 OracleConnection connection = new OracleConnection(CONNECT_STRING);
                 connection.Open();
 
