@@ -6,6 +6,6 @@ CREATE ROLE TRGDA_ROLE;
 GRANT NHANVIEN_ROLE TO TRGDA_ROLE;
 GRANT INSERT, DELETE, UPDATE ON ADMIN.DEAN TO TRGDA_ROLE;
 
-create user TD007 identified by TD007;
-grant create session to TD007;
-grant NHANSU_ROLE to TD007;
+create user TD001 identified by TD001;
+grant create session to TD001;
+grant TRGDA_ROLE to TD001;
