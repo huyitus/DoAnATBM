@@ -23,7 +23,7 @@ namespace NhanVien
             {
                 oracleConnection = Global.CreateConnection(connStr);
                 oracleConnection.Open();
-                
+
                 Session.username = username;
                 Session.password = password;
 
@@ -55,9 +55,14 @@ namespace NhanVien
                     FormFeatures_TDA form = new FormFeatures_TDA();
                     form.Show();
                 }
-                else if (work == "QL" || work == "TP")
+                else if (work == "QL")
                 {
                     FormFeaturesQLTrucTiep form = new FormFeaturesQLTrucTiep();
+                    form.Show();
+                }
+                else if (work == "TP")
+                {
+                    FormFeatures_TruongPhong form = new FormFeatures_TruongPhong();
                     form.Show();
                 }
             }
@@ -65,6 +70,11 @@ namespace NhanVien
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

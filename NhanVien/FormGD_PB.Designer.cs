@@ -39,7 +39,7 @@
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(805, 455);
+            this.dataGrid.Size = new System.Drawing.Size(473, 292);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(469, 287);
             this.Controls.Add(this.dataGrid);
             this.Name = "FormGD_PB";
             this.Text = "FormGD_PB";

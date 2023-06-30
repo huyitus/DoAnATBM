@@ -47,5 +47,21 @@ namespace NhanVien
             FormCapNhatLuongPhuCap form = new FormCapNhatLuongPhuCap();
             form.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormSuaNhanVien form = new FormSuaNhanVien();   form.Show();    
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormXemPhanCong form    = new FormXemPhanCong();    form.Show();    
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormXemNhanVien form = new FormXemNhanVien();
+            form.Show();    
+        }
     }
 }

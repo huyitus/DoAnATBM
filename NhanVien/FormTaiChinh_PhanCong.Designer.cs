@@ -39,7 +39,7 @@
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(802, 447);
+            this.dataGrid.Size = new System.Drawing.Size(440, 322);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGird_CellContentClick);
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(436, 326);
             this.Controls.Add(this.dataGrid);
             this.Name = "FormTaiChinh_PhanCong";
             this.Text = "FormTaiChinh_PhanCong";

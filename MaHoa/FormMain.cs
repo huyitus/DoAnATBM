@@ -106,5 +106,10 @@ namespace MaHoa
                 MessageBox.Show(err.ToString());
             }
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
