@@ -99,6 +99,12 @@
     <Compile Include="FormCapNhatPhongBan.Designer.cs">
       <DependentUpon>FormCapNhatPhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFeatures_TruongPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFeatures_TruongPhong.Designer.cs">
+      <DependentUpon>FormFeatures_TruongPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNsSuaNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,12 @@
     <Compile Include="FormSuaNhanVien.Designer.cs">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTPthemPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTPthemPC.Designer.cs">
+      <DependentUpon>FormTPthemPC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,10 +249,22 @@
     <Compile Include="FormXoaDeAn.Designer.cs">
       <DependentUpon>FormXoaDeAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXoaPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXoaPhanCong.Designer.cs">
+      <DependentUpon>FormXoaPhanCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="FormXemPhanCongCuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemPhanCongCuaPhong.Designer.cs">
+      <DependentUpon>FormXemPhanCongCuaPhong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormCapNhatDeAn.resx">
       <DependentUpon>FormCapNhatDeAn.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFeatures_TDA.resx">
       <DependentUpon>FormFeatures_TDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFeatures_TruongPhong.resx">
+      <DependentUpon>FormFeatures_TruongPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGD_DA.resx">
       <DependentUpon>FormGD_DA.cs</DependentUpon>
@@ -301,6 +328,9 @@
     <EmbeddedResource Include="FormThemNhanVien.resx">
       <DependentUpon>FormThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTPthemPC.resx">
+      <DependentUpon>FormTPthemPC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormXemNhanVien.resx">
       <DependentUpon>FormXemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +346,9 @@
     <EmbeddedResource Include="FormXoaDeAn.resx">
       <DependentUpon>FormXoaDeAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormXoaPhanCong.resx">
+      <DependentUpon>FormXoaPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -327,6 +360,9 @@
     </Compile>
     <EmbeddedResource Include="FormThemPhongBan.resx">
       <DependentUpon>FormThemPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemPhanCongCuaPhong.resx">
+      <DependentUpon>FormXemPhanCongCuaPhong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

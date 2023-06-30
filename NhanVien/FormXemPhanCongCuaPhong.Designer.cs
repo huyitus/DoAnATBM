@@ -1,6 +1,6 @@
 ﻿namespace NhanVien
 {
-    partial class FormGD_DA
+    partial class XemPhanCongCuaPhong
     {
         /// <summary>
         /// Required designer variable.
@@ -35,22 +35,22 @@
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(-5, 2);
+            this.dataGrid.Location = new System.Drawing.Point(-1, 1);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(809, 451);
+            this.dataGrid.Size = new System.Drawing.Size(695, 396);
             this.dataGrid.TabIndex = 0;
-            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
+            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // FormGD_DA
+            // XemPhanCongCuaPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 290);
+            this.ClientSize = new System.Drawing.Size(696, 397);
             this.Controls.Add(this.dataGrid);
-            this.Name = "FormGD_DA";
-            this.Text = "FormGD_DA";
+            this.Name = "XemPhanCongCuaPhong";
+            this.Text = "XemPhanCongCuaPhong";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 

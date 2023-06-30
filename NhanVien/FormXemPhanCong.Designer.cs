@@ -40,7 +40,7 @@ namespace NhanVien
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(784, 432);
+            this.dataGrid.Size = new System.Drawing.Size(452, 432);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
@@ -48,7 +48,7 @@ namespace NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(466, 450);
             this.Controls.Add(this.dataGrid);
             this.Name = "FormXemPhanCong";
             this.Text = "FormXemPhanCong";
